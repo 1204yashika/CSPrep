@@ -1,0 +1,218 @@
+﻿Qid,Category,Topic,Question,ImageName,OptionA,OptionB,OptionC,OptionD,Correct,Marks
+GATE15P1Q1,GA,,Didn't you buy _________ when you went shopping?,,any paper,much paper,no paper,a few paper,1,1
+GATE15P1Q2,GA,,Which of the following combinations is incorrect?,,Acquiescence - Submission,Wheedle - Roundabout,Flippancy - Lightness,Profligate - Extravagant,2,1
+GATE15P1Q3,GA,,"Given set A = {2, 3, 4, 5} and Set B = {11, 12, 13, 14, 15}, two numbers are randomly selected, one from each set. What is probability that the sum of the two numbers equals 16?",,0.2,0.25,0.3,0.33,1,1
+GATE15P1Q4,GA,,Which of the following options is the closest in meaning to the sentence below? She enjoyed herself immensely at the party.,,She had a terrible time at the party.,She had a horrible time at the party.,She had a terrific time at the party,She had a terrifying time at the party,3,1
+GATE15P1Q5,GA,,"Based on the given statements, select the most appropriate option to solve the given question. If two floors in a certain building are 9 feet apart, how many steps are there in a set of stairs that extends from the first floor to the second floor of the building? Statements: (I) Each step is ¾ foot high. (II) Each step is 1 foot wide.",,"Statement I alone is sufficient, but statement II alone is not sufficient.","Statement II alone is sufficient, but statement I alone is not sufficient.","Both statements together are sufficient, but neither statement alone is sufficient.",Statement I and II together are not sufficient.,4,1
+GATE15P1Q6,GA,,"The pie chart below has the breakup of the number of students from different departments in an
+engineering college for the year 2012. The proportion of male to female students in each
+department is 5:4. There are 40 males in Electrical Engineering. What is the difference between
+numbers of female students in the Civil department and the female students in the Mechanical
+department?",I001,32,40,28,32.5,1,2
+GATE15P1Q7,GA,,Select the alternative meaning of the underlined part of the sentence. The chain snatchers took to their heels when the police party arrived.,,took shelter in a thick jungle,open indiscriminate fire,took to flight,unconditionally surrendered,3,2
+GATE15P1Q8,GA,,"The probabilities that a student passes in Mathmatics, Physics and Chemistry are m,p, and c respectively. Of these subjects, the student has 75% chance of passing in at least one, a 50% chance of passing in at least two and a 40% chance of passing in exactly two. Following relations are drawn in m, p, c: (I) p + m + c = 27/20 (II) p + m + c = 13/20 (III) (p)  (m)  (c) = 1/10",,Only relation I is true,Only relation II is true,Relations II and III are true.,Relations I and III are true.,1,2
+GATE15P1Q9,GA,,"The given statement is followed by some courses of action. Assuming the statement to be true, decide the correct option. Statement: There has been a significant drop in the water level in the lakes supplying water to the city. Course of action: (I) The water supply authority should impose a partial cut in supply to tackle the situation. (II) The government should appeal to all the residents through mass media for minimal use of water. (III) The government should ban the water supply in lower areas.",,Statements I and II follow.,Statements I and III follow,Statements II and III follow.,All statements follow.,1,2
+GATE15P1Q10,GA,,"The number of students in a class who have answered correctly, wrongly, or not attempted each
+question in an exam, are listed in the table below. The marks for each question are also listed.
+There is no negative or partial marking. What is the average of the marks obtained by the class in the examination?",I002,2.29,2.97,6.795,8.795,2,2
+GATE15P1Q11,CS,,Which one of the following is True at any valid state in shift-reduce parsing?,,Viable prefixes appear only at the bottom of the stack and not inside,Viable prefixes appear only at the top of the stack and not inside,The stack contains only a set of viable prefixes,The stack never contains viable prefixes,2,1
+GATE15P1Q12,CS,,Match the following,I003,A-2 B-3 C-1 D-4,A-3 B-4 C-2 D-1,A-3 B-1 C-4 D-2,A-3 B-1 C-2 D-4,4,1
+GATE15P1Q13,CS,,"For computers based on three-address instruction formats, each address field can be used to
+specify which of the following:
+S1: A memory operand
+S2: A processor register
+S3: An implied accumulator register",,Either S1 or S2,Either S2 or S3,Only S2 and S3,"All of S1, S2 and S3",1,1
+GATE15P1Q14,CS,,"Which one of the following is the recurrence equation for the worst case time complexity of the
+Quicksort algorithm for sorting n(≥ 2) numbers? In the recurrence equations given in the options
+below, c is a constant.",,T(n) = 2T (n/2) + cn,T(n) = T(n – 1) + T(1) + cn,T(n) = 2T (n – 2) + cn,T(n) = T(n/2) + cn,2,1
+GATE15P1Q15,CS,,"For any two languages L1 and L2 such that L1 is context free and L2 is recursively enumerable but
+not recursive, which of the following is/are necessarily true?
+I. 1 L (complement of L1) is recursive
+II. 2 L (complement of L2) is recursive
+III. 1 L is context-free
+IV. 1 L  L2 is recursively enumerable",,I only,III only,III and IV only,I and IV only,4,1
+GATE15P1Q16,CS,,"Suppose two hosts use a TCP connection to transfer a large file. Which of the following statements is/are FALSE with respect to the TCP connection? I. If the sequence number of a segment is m, then the sequence number of the subsequent segment is always m+1. II. If the estimated round trip time at any given point of time is t sec, the value of the retransmission timeout is always set to greater than or equal to t sec. III. The size of the advertised window never changes during the course of the TCP connection. IV. The number of unacknowledged bytes at the sender is always less than or equal to the advertised window",,III only,I and III only,I and IV only,II and IV only,2,1
+GATE15P1Q17,CS,,The following two functions P1 and P2 that share a variable B with an initial value of 2 execute concurrently. The number of distinct values that B can possibly take after the execution is ________.,I004,2,3,4,1,2,1
+GATE15P1Q18,CS,,"Consider a 4 bit Johnson counter with an initial value of 0000. The counting sequence of this
+counter is",,"0, 1, 3, 7, 15, 14, 12, 8, 0","0, 1, 3, 5, 7, 9, 11, 13, 15, 0","0, 2, 4, 6, 8, 10, 12, 14, 0","0, 8, 12, 14, 15, 7, 3, 1, 0",4,1
+GATE15P1Q19,CS,,Which one of the following fields of an IP header is NOT modified by a typical IP router?,,Checksum,Source address,Time to Live (TTL),Length,2,1
+GATE15P1Q20,CS,,Select operation in SQL is equivalent to,,the selection operation in relational algebra,"the selection operation in relational algebra, except that SELECT in SQL retains duplicates",the projection operation in relational algebra,"the projection operation in relational algebra, except that SELECT in SQL retains duplicates",4,1
+GATE15P1Q21,CS,,"In the LU decomposition of the matrix given below, if the diagonal elements of U are both 1, then the lower diagonal entry 22 l of L is ___________.",I005,4,5,7,2,2,1
+GATE15P1Q22,CS,,Match the following,I006,"P -iii, Q-ii, R -iv, S-i","P -i, Q-ii, R -iv, S-iii","P -ii, Q-iii, R -iv, S-i","P -ii, Q-i, R -iii, S-iv",3,1
+GATE15P1Q23,CS,,The output of the following C program is __________.,I007,3,4,5,2,3,1
+GATE15P1Q24,CS,,lim<sub>x->&infin;</sub> x<sup>1/2</sup> is,,&infin;,0,1,Not defined,3,1
+GATE15P1Q25,CS,,"For a set A, the power set of A is denoted by 2A. If A = {5, {6}, {7}}, which of the following
+options are True?",I008,1 and 3 only,2 and 3 only,"1, 2 and 3 only","1, 2 and 4 only",3,1
+GATE15P1Q26,CS,,"Consider a system with byte-addressable memory, 32 bit logical addresses, 4 kilobyte page size
+and page table entries of 4 bytes each. The size of the page table in the system in megabytes is
+___________.",,3,5,4,2,3,1
+GATE15P1Q27,CS,,"A file is organized so that the ordering of data records is the same as or close to the ordering of
+data entries in some index. Then that index is called",,Dense,Sparse,Clustered,Unclustered,1,1
+GATE15P1Q28,CS,,What are the worst-case complexities of insertion and deletion of a key in a binary search tree?,,θ(logn) for both insertion and deletion,θ(n) for both insertion and deletion,θ(n) for insertion and θ(logn) for deletion,θ(logn) for insertion and θ(n) for deletion,2,1
+GATE15P1Q29,CS,,"Suppose that everyone in a group of N people wants to communicate secretly with the N–1 others
+using symmetric key cryptographic system. The communication between any two persons should
+not be decodable by the others in the group. The number of keys required in the system as a
+whole to satisfy the confidentiality requirement is",,2N,N(N – 1),N(N – 1)/2,(N – 1)<sup>2</sup>,3,1
+GATE15P1Q30,CS,,Which one of the following is Not equivalent to p &harr q?,,(￢p V q) ^ (p V ￢q),(￢p V q) ^ (q &rarr p),(￢p ^ q) V (p ^ ￢q),(￢p ^ ￢q) V (p ^ q),3,1
+GATE15P1Q31,CS,,Which of the following is/are correct inorder traversal sequence(s) of binary search tree(s)?,I009,1 and 4 only,2 and 3 only,2 and 4 only,2 only,1,1
+GATE15P1Q32,CS,,"In one of the pairs of protocols given below, both the protocols can use multiple TCP connections
+between the same client and the server. Which one is that?",,"HTTP, FT","HTTP, TELNET","FTP, SMTP","HTTP, SMTP",4,1
+GATE15P1Q33,CS,,"Which of following statements is/are FALSE?
+I. XML overcomes the limitations in HTML to support a structured way of organizing content.
+II. XML specification is not case sensitive while HTML specification is case sensitive.
+III. XML supports user defined tags while HTML uses pre-defined tags.
+VI. XML tags need not be closed while HTML tags must be closed",,II only,I only,II and IV only,III and IV only,3,1
+GATE15P1Q34,CS,,"If g(x) =1-x and h(x) = x/x-1, then g(h(x))/h(g(x)) is :",,h(x)/g(x),-1,g(x)/h(x),x/(1-x)<sup>2</sup>,1,1
+GATE15P1Q35,CS,,"The height of a tree is the length of the longest root-to-leaf path in it. The maximum and
+minimum number of nodes in a binary tree of height 5 are",,"63 and 6, respectively","64 and 5, respectively","32 and 6, respectively","31 and 5, respectively",1,1
+GATE15P1Q36,CS,,"What is the output of the following C code?
+Assume that the address of X is 2000 (in decimal) and an integer requires four bytes of memory.",I010,"2036, 2036, 2036","2012,4,2204","2036,10,10","2012,4,6",3,2
+GATE15P1Q37,CS,,"Consider the DFAs M and N given above. The number of states in a minimal DFA that accepts
+the language L(M) &cap; L(N) is __________.",I011,2,1,3,4,2,2
+GATE15P1Q38,CS,,"Consider a non-pipelined processor with a clock rate of 2.5 gigahertz and average cycles per
+instruction of four. The same processor is upgraded to a pipelined processor with five stages; but
+due to the internal pipeline delay, the clock speed is reduced to 2 gigahertz. Assume that there are
+no stalls in the pipeline. The speed up achieved in this pipelined processor is __________.",,3.2,3.5,3.3,3.1,1,2
+GATE15P1Q39,CS,,"The least number of temporary variables required to create a three-address code in static single
+assignment form for the expression q + r/3 + s – t * 5 + u * v/w is _________.",,4,3.5,3,4.4,3,2
+GATE15P1Q40,CS,,"Suppose L = {p, q, r, s, t} is a lattice represented by the following Hasse diagram given below:
+For any xy&isin;L, not necessarily distinct, x V y and x ^ y are join and meet of x, y respectively.
+Let L3 = {(x,y,z): x, y, z &isin; L} be the set of all ordered triplets of the elements of L. Let pr be the
+probability that an element (x,y,z) &isin; L3 chosen equiprobably satisfies x V (y ^ z) = (x V y)
+^
+(x V z). Then",I012,pr = 0,pr = 1,0 &lt; pr &le; 1/5,1/5 &lt; pr &lt; 1,4,2
+GATE15P1Q41,CS,,"Consider the NPDA &lt;Q = {q0, q1, q2}, &sum; = {0, 1}, Γ = {0, 1, &perp; }, δ, q0, &perp; , F = {q2}>, where (as
+per usual convention) Q is the set of states, &sum; is the input alphabet, Γ is stack alphabet, δ is the
+state transition function, q<sub>0</sub> is the initial state, &perp; is the initial stack symbol, and F is the set of
+accepting states, The state transition is as follows
+Which one of the following sequences must follow the string 101100 so that the
+overall string is accepted by the automaton?",I013,10110,10010,,1001,4,2
+GATE15P1Q42,CS,,"Consider the following pseudo code, where x and y are positive integers.
+begin
+q := 0
+r := x
+while r ≥ y do
+begin
+r := r – y
+q := q + 1
+end
+end
+The post condition that needs to be satisfied after the program terminates is",,{r = qx + y ^ r &lt; y},{x = qy + r ^ r &lt; y},{y = qx + r ^ 0 &lt; r &lt; y},{q + 1 &lt; r – y ^ y &gt; 0},2,2
+GATE15P1Q43,CS,,"An algorithm performs (logN)1/2 find operations, N insert operations, (logN)1/2 delete operations,
+and (logN)1/2 decrease-key operations on a set of data items with keys drawn from a linearly
+ordered set. For a delete operation, a pointer is provided to the record that must be deleted.
+For the decrease-key operation, a pointer is provided to the record that has its key decreased.
+Which one of the following data structures is the most suited for the algorithm to use, if the goal
+is to achieve the best total asymptotic complexity considering all the operations?",,Unsorted array,Min-heap,Sorted array,Sorted doubly linked list,1,2
+GATE15P1Q44,CS,,"Consider a max heap, represented by the array: 40, 30, 20, 10, 15, 16, 17, 8, 4.
+Now consider that a value 35 is inserted into this heap. After insertion, the new heap is",I014,"40, 30, 20, 10, 15, 16, 17, 8, 4, 35","40, 35, 20, 10, 30, 16, 17, 8, 4, 15","40, 30, 20, 10, 35, 16, 17, 8, 4, 15","40, 35, 20, 10, 15, 16, 17, 8, 4, 30",2,2
+GATE15P1Q45,CS,,"Consider the following 2 × 2 matrix A where two elements are unknown and are marked by a and
+b. The eigen values of this matrix are –1 and 7. What are the values of a and b?",I015,"a = 6, b = 4","a = 4, b = 6","a = 3, b = 5","a = 5, b = 3",4,2
+GATE15P1Q46,CS,,"Let G = (V, E) be a simple undirected graph, and s be a particular vertex in it called the source.
+For x &isin;V, let d(x) denote the shortest distance in G from s to x. A breadth first search (BFS) is
+performed starting at s. Let T be the resultant BFS tree. If (u, v) is an edge of G that is not in T,
+then which one of the following CANNOT be the value of d(u) – d(v)?",,-1,0,1,2,3,2
+GATE15P1Q47,CS,,"The binary operator &ne; is defined by the following truth table:
+Which one of the following is true about the binary operator &ne; ?",I016,Both commutative and associative,Commutative but not associative,Not commutative but associative,Neither commutative nor associative,1,2
+GATE15P1Q48,CS,,"Consider an Entity-Relationship (ER) model in which entity sets E1and E2 are connected by an
+m : n relationship R12, E1 and E3 are connected by a 1 : n (1 on the side of E1 and n on the side of
+E3) relationship R13.
+E1 has two single-valued attributes a11 and a12 of which a11 is the key attribute. E2 has two singlevalued
+attributes a21 and a22 of which a21 is the key attribute. E3 has two single-valued attributes
+a31 and a32 of which a31 is the key attribute. The relationships do not have any attributes.
+If a relational model is derived from the above ER model, then the minimum number of relations
+that would be generated if all the relations are in 3NF is ___________.",,5,6,3,4,1,2
+GATE15P1Q49,CS,,"The graph shown below 8 edges with distinct integer edge weights. The minimum spanning tree
+(MST) is of weight 36 and contains the edges: {(A, C), (B, C), (B, E), (E, F), (D, F)}. The edge
+weights of only those edges which are in the MST are given in the figure shown below. The
+minimum possible sum of weights of all 8 edges of this graph is ______________.",I017,67,69,68,60,2,2
+GATE15P1Q50,CS,,"Consider a disk pack with a seek time of 4 milliseconds and rotational speed of 10000 rotations
+per minute (RPM). It has 600 sectors per track and each sector can store 512 bytes of data.
+Consider a file stored in the disk. The file contains 2000 sectors. Assume that every sector access
+necessitates a seek, and the average rotational latency for accessing each sector is half of the time
+for one complete rotation. The total time (in milliseconds) needed to read the entire file is
+_________.",,14022,14020,14030,14050,2,2
+GATE15P1Q51,CS,,.,I018,3,-1,2,1,2,2
+GATE15P1Q52,CS,,"Consider the following C program segment.
+while (first <= last)
+{
+if (array [middle] < search)
+first = middle +1;
+else if (array [middle] == search)
+found = True;
+else last = middle – 1;
+middle = (first + last)/2;
+}
+if (first > last) notPresent = True;
+The cyclomatic complexity of the program segment is __________.",,6,5,3,2,2,2
+GATE15P1Q53,CS,,"Consider the following C function.
+int fun1 (int n)
+{
+int i, j, k, p, q = 0;
+for (i = 1; i<n; ++i)
+{
+p = 0;
+for (j=n; j>1; j=j/2)
+++p;
+for (k=1; k<p; k=k*2)
+++q;
+}
+return q;
+}
+Which one of the following most closely approximates the return value of the function
+fun1?",,n3,n(logn)2,nlogn,nlog(logn),3,2
+GATE15P1Q54,CS,,"Let an represent the number of bit strings of length n containing two consecutive 1s. What is the
+recurrence relation for an?",,an–2 + an–1 + 2n–2,an–2 + 2an–1 + 2n–2,2an–2 + an–1 + 2n–2,2an–2 + 2an–1 + 2n–2,1,2
+GATE15P1Q55,CS,,"A variable x is said to be live at a statement Si in a program if the following three conditions hold
+simultaneously:
+1. There exists a statement Sj that uses x
+2. There is a path from Si to Sj in the flow graph corresponding to the program
+3. The path has no intervening assignment to x including at Si and Sj
+The variables which are live both at the statement in basic block 2 and at the statement in basic
+block 3 of the below control flow graph are",I019,"p, s, u","r, s, u","r, u","q, v",3,2
+GATE15P1Q56,CS,,"Consider a uniprocessor system executing three tasks T1, T2 and T3, each of which is composed of
+an infinite sequence of jobs (or instances) which arrive periodically at intervals of 3, 7 and 20
+milliseconds, respectively. The priority of each task is the inverse of its period and the available
+tasks are scheduled in order of priority, with the highest priority task scheduled first. Each
+instance of T1, T2 and T3 requires an execution time of 1, 2 and 4 milliseconds, respectively.
+Given that all tasks initially arrive at the beginning of the 1st millisecond and task preemptions
+are allowed, the first instance of T3 completes its execution at the end of ______________
+milliseconds.",,14,13,11,10,2,2
+GATE15P1Q57,CS,,"Consider the following relations:
+Consider the following SQL query.
+SELECT S. Student_Name, sum (P.Marks)
+FROM Student S, Performance P
+WHERE S. Roll_No =P.Roll_No
+GROUP BY S.Student_Name
+The number of rows that will be returned by the SQL query is _________.",I020,1,2,3,4,2,2
+GATE15P1Q58,CS,,"A positive edge-triggered D flip-flop is connected to a positive edge-triggered JK flipflop as
+follows. The Q output of the D flip-flop is connected to both the J and K inputs of the JK flipflop,
+while the Q output of the JK flip-flop is connected to the input of the D flip-flop. Initially,
+the output of the D flip-flop is set to logic one and the output of the JK flip-flop is cleared. Which
+one of the following is the bit sequence (including the initial state) generated at the Q output of
+the JK flip-flop when the flip-flops are connected to a free-running common clock? Assume that J
+= K = 1 is the toggle mode and J = K = 0 is the state-holding mode of the JK flip-flop. Both the
+flip-flops have non-zero propagation delays.",,0110110...,0100100…,011101110…,011001100…,1,2
+GATE15P1Q59,CS,,"Let G be a connected planar graph with 10 vertices. If the number of edges on each face is three,
+then the number of edges in G is _______________.",,23,24,25,8,2,2
+GATE15P1Q60,CS,,"Consider a LAN with four nodes S1, S2, S3 and S4. Time is divided into fixed-size slots, and a
+node can begin its transmission only at the beginning of a slot. A collision is said to have
+occurred if more than one node transmit in the same slot. The probabilities of generation of a
+frame in a time slot by S1, S2, S3 and S4 are 0.1, 0.2, 0.3 and 0.4, respectively. The probability of
+sending a frame in the first slot without any collision by any of these four stations is _________.",,0.456,0.462,0.567,0.423,2,2
+GATE15P1Q61,CS,,"Suppose the following disk request sequence (track numbers) for a disk with 100 tracks is given:
+45, 20, 90, 10, 50, 60, 80, 25, 70. Assume that the initial position of the R/W head is on track 50.
+The additional distance that will be traversed by the R/W head when the Shortest Seek Time First
+(SSTF) algorithm is used compared to the SCAN (Elevator) algorithm (assuming that SCAN
+algorithm moves towards 100 when it starts execution) is _________ tracks.",,6,10,7,9,2,2
+GATE15P1Q62,CS,,"Suppose that the stop-and-wait protocol is used on a link with a bit rate of 64 kilobits per second
+and 20 milliseconds propagation delay. Assume that the transmission time for the
+acknowledgment and the processing time at nodes are negligible. Then the minimum frame size
+in bytes to achieve a link utilization of at least 50% is _________.",,340,320,350,360,2,2
+GATE15P1Q63,CS,,"Consider a main memory with five page frames and the following sequence of page references: 3,
+8, 2, 3, 9, 1, 6, 3, 8, 9, 3, 6, 2, 1, 3. Which one of the following is true with respect to page
+replacement policies First-In-First Out (FIFO) and Least Recently Used (LRU)?",,Both incur the same number of page faults,FIFO incurs 2 more page faults than LRU,LRU incurs 2 more page faults than FIFO,FIFO incurs 1 more page faults than LRU,1,2
+GATE15P1Q64,CS,,"Consider the operations
+f (X,Y,Z ) = X′YZ + XY′+Y′Z′ and g (X,Y,Z ) = X′YZ + X′YZ′ + XY",,Both {f} and {g} are functionally complete,Only {f} is functionally complete,Only {g} is functionally complete,Neither {f} nor {g} is functionally complete,2,2
+GATE15P1Q65,CS,,.,I021,0.98,0.99,0.97,0.96,2,2
+,,,,,,,,,,
