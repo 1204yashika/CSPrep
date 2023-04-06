@@ -1,17 +1,17 @@
 ﻿Qid,Category,Topic,Question,ImageName,OptionA,OptionB,OptionC,OptionD,Correct,Marks
-GATE15P1Q1,GA,,Didn't you buy _________ when you went shopping?,,any paper,much paper,no paper,a few paper,1,1
-GATE15P1Q2,GA,,Which of the following combinations is incorrect?,,Acquiescence - Submission,Wheedle - Roundabout,Flippancy - Lightness,Profligate - Extravagant,2,1
-GATE15P1Q3,GA,,"Given set A = {2, 3, 4, 5} and Set B = {11, 12, 13, 14, 15}, two numbers are randomly selected, one from each set. What is probability that the sum of the two numbers equals 16?",,0.2,0.25,0.3,0.33,1,1
-GATE15P1Q4,GA,,Which of the following options is the closest in meaning to the sentence below? She enjoyed herself immensely at the party.,,She had a terrible time at the party.,She had a horrible time at the party.,She had a terrific time at the party,She had a terrifying time at the party,3,1
-GATE15P1Q5,GA,,"Based on the given statements, select the most appropriate option to solve the given question. If two floors in a certain building are 9 feet apart, how many steps are there in a set of stairs that extends from the first floor to the second floor of the building? Statements: (I) Each step is ¾ foot high. (II) Each step is 1 foot wide.",,"Statement I alone is sufficient, but statement II alone is not sufficient.","Statement II alone is sufficient, but statement I alone is not sufficient.","Both statements together are sufficient, but neither statement alone is sufficient.",Statement I and II together are not sufficient.,4,1
-GATE15P1Q6,GA,,"The pie chart below has the breakup of the number of students from different departments in an
+GATE15P1Q01,GA,,Didn't you buy _________ when you went shopping?,,any paper,much paper,no paper,a few paper,1,1
+GATE15P1Q02,GA,,Which of the following combinations is incorrect?,,Acquiescence - Submission,Wheedle - Roundabout,Flippancy - Lightness,Profligate - Extravagant,2,1
+GATE15P1Q03,GA,,"Given set A = {2, 3, 4, 5} and Set B = {11, 12, 13, 14, 15}, two numbers are randomly selected, one from each set. What is probability that the sum of the two numbers equals 16?",,0.2,0.25,0.3,0.33,1,1
+GATE15P1Q04,GA,,Which of the following options is the closest in meaning to the sentence below? She enjoyed herself immensely at the party.,,She had a terrible time at the party.,She had a horrible time at the party.,She had a terrific time at the party,She had a terrifying time at the party,3,1
+GATE15P1Q05,GA,,"Based on the given statements, select the most appropriate option to solve the given question. If two floors in a certain building are 9 feet apart, how many steps are there in a set of stairs that extends from the first floor to the second floor of the building? Statements: (I) Each step is ¾ foot high. (II) Each step is 1 foot wide.",,"Statement I alone is sufficient, but statement II alone is not sufficient.","Statement II alone is sufficient, but statement I alone is not sufficient.","Both statements together are sufficient, but neither statement alone is sufficient.",Statement I and II together are not sufficient.,4,1
+GATE15P1Q06,GA,,"The pie chart below has the breakup of the number of students from different departments in an
 engineering college for the year 2012. The proportion of male to female students in each
 department is 5:4. There are 40 males in Electrical Engineering. What is the difference between
 numbers of female students in the Civil department and the female students in the Mechanical
 department?",I001,32,40,28,32.5,1,2
-GATE15P1Q7,GA,,Select the alternative meaning of the underlined part of the sentence. The chain snatchers took to their heels when the police party arrived.,,took shelter in a thick jungle,open indiscriminate fire,took to flight,unconditionally surrendered,3,2
-GATE15P1Q8,GA,,"The probabilities that a student passes in Mathmatics, Physics and Chemistry are m,p, and c respectively. Of these subjects, the student has 75% chance of passing in at least one, a 50% chance of passing in at least two and a 40% chance of passing in exactly two. Following relations are drawn in m, p, c: (I) p + m + c = 27/20 (II) p + m + c = 13/20 (III) (p)  (m)  (c) = 1/10",,Only relation I is true,Only relation II is true,Relations II and III are true.,Relations I and III are true.,1,2
-GATE15P1Q9,GA,,"The given statement is followed by some courses of action. Assuming the statement to be true, decide the correct option. Statement: There has been a significant drop in the water level in the lakes supplying water to the city. Course of action: (I) The water supply authority should impose a partial cut in supply to tackle the situation. (II) The government should appeal to all the residents through mass media for minimal use of water. (III) The government should ban the water supply in lower areas.",,Statements I and II follow.,Statements I and III follow,Statements II and III follow.,All statements follow.,1,2
+GATE15P1Q07,GA,,Select the alternative meaning of the underlined part of the sentence. The chain snatchers took to their heels when the police party arrived.,,took shelter in a thick jungle,open indiscriminate fire,took to flight,unconditionally surrendered,3,2
+GATE15P1Q08,GA,,"The probabilities that a student passes in Mathmatics, Physics and Chemistry are m,p, and c respectively. Of these subjects, the student has 75% chance of passing in at least one, a 50% chance of passing in at least two and a 40% chance of passing in exactly two. Following relations are drawn in m, p, c: (I) p + m + c = 27/20 (II) p + m + c = 13/20 (III) (p)  (m)  (c) = 1/10",,Only relation I is true,Only relation II is true,Relations II and III are true.,Relations I and III are true.,1,2
+GATE15P1Q09,GA,,"The given statement is followed by some courses of action. Assuming the statement to be true, decide the correct option. Statement: There has been a significant drop in the water level in the lakes supplying water to the city. Course of action: (I) The water supply authority should impose a partial cut in supply to tackle the situation. (II) The government should appeal to all the residents through mass media for minimal use of water. (III) The government should ban the water supply in lower areas.",,Statements I and II follow.,Statements I and III follow,Statements II and III follow.,All statements follow.,1,2
 GATE15P1Q10,GA,,"The number of students in a class who have answered correctly, wrongly, or not attempted each
 question in an exam, are listed in the table below. The marks for each question are also listed.
 There is no negative or partial marking. What is the average of the marks obtained by the class in the examination?",I002,2.29,2.97,6.795,8.795,2,2
@@ -23,8 +23,8 @@ S1: A memory operand
 S2: A processor register
 S3: An implied accumulator register",,Either S1 or S2,Either S2 or S3,Only S2 and S3,"All of S1, S2 and S3",1,1
 GATE15P1Q14,CS,,"Which one of the following is the recurrence equation for the worst case time complexity of the
-Quicksort algorithm for sorting n(≥ 2) numbers? In the recurrence equations given in the options
-below, c is a constant.",,T(n) = 2T (n/2) + cn,T(n) = T(n – 1) + T(1) + cn,T(n) = 2T (n – 2) + cn,T(n) = T(n/2) + cn,2,1
+Quicksort algorithm for sorting n(&ga; 2) numbers? In the recurrence equations given in the options
+below, c is a constant.",,T(n) = 2T (n/2) + cn,T(n) = T(n - 1) + T(1) + cn,T(n) = 2T (n - 2) + cn,T(n) = T(n/2) + cn,2,1
 GATE15P1Q15,CS,,"For any two languages L1 and L2 such that L1 is context free and L2 is recursively enumerable but
 not recursive, which of the following is/are necessarily true?
 I. 1 L (complement of L1) is recursive
@@ -49,10 +49,10 @@ ___________.",,3,5,4,2,3,1
 GATE15P1Q27,CS,,"A file is organized so that the ordering of data records is the same as or close to the ordering of
 data entries in some index. Then that index is called",,Dense,Sparse,Clustered,Unclustered,1,1
 GATE15P1Q28,CS,,What are the worst-case complexities of insertion and deletion of a key in a binary search tree?,,θ(logn) for both insertion and deletion,θ(n) for both insertion and deletion,θ(n) for insertion and θ(logn) for deletion,θ(logn) for insertion and θ(n) for deletion,2,1
-GATE15P1Q29,CS,,"Suppose that everyone in a group of N people wants to communicate secretly with the N–1 others
+GATE15P1Q29,CS,,"Suppose that everyone in a group of N people wants to communicate secretly with the N-1 others
 using symmetric key cryptographic system. The communication between any two persons should
 not be decodable by the others in the group. The number of keys required in the system as a
-whole to satisfy the confidentiality requirement is",,2N,N(N – 1),N(N – 1)/2,(N – 1)<sup>2</sup>,3,1
+whole to satisfy the confidentiality requirement is",,2N,N(N - 1),N(N - 1)/2,(N - 1)<sup>2</sup>,3,1
 GATE15P1Q30,CS,,Which one of the following is Not equivalent to p &harr q?,,(￢p V q) ^ (p V ￢q),(￢p V q) ^ (q &rarr p),(￢p ^ q) V (p ^ ￢q),(￢p ^ ￢q) V (p ^ q),3,1
 GATE15P1Q31,CS,,Which of the following is/are correct inorder traversal sequence(s) of binary search tree(s)?,I009,1 and 4 only,2 and 3 only,2 and 4 only,2 only,1,1
 GATE15P1Q32,CS,,"In one of the pairs of protocols given below, both the protocols can use multiple TCP connections
@@ -74,7 +74,7 @@ instruction of four. The same processor is upgraded to a pipelined processor wit
 due to the internal pipeline delay, the clock speed is reduced to 2 gigahertz. Assume that there are
 no stalls in the pipeline. The speed up achieved in this pipelined processor is __________.",,3.2,3.5,3.3,3.1,1,2
 GATE15P1Q39,CS,,"The least number of temporary variables required to create a three-address code in static single
-assignment form for the expression q + r/3 + s – t * 5 + u * v/w is _________.",,4,3.5,3,4.4,3,2
+assignment form for the expression q + r/3 + s - t * 5 + u * v/w is _________.",,4,3.5,3,4.4,3,2
 GATE15P1Q40,CS,,"Suppose L = {p, q, r, s, t} is a lattice represented by the following Hasse diagram given below:
 For any xy&isin;L, not necessarily distinct, x V y and x ^ y are join and meet of x, y respectively.
 Let L3 = {(x,y,z): x, y, z &isin; L} be the set of all ordered triplets of the elements of L. Let pr be the
@@ -91,13 +91,13 @@ GATE15P1Q42,CS,,"Consider the following pseudo code, where x and y are positive 
 begin
 q := 0
 r := x
-while r ≥ y do
+while r &ga; y do
 begin
-r := r – y
+r := r - y
 q := q + 1
 end
 end
-The post condition that needs to be satisfied after the program terminates is",,{r = qx + y ^ r &lt; y},{x = qy + r ^ r &lt; y},{y = qx + r ^ 0 &lt; r &lt; y},{q + 1 &lt; r – y ^ y &gt; 0},2,2
+The post condition that needs to be satisfied after the program terminates is",,{r = qx + y ^ r &lt; y},{x = qy + r ^ r &lt; y},{y = qx + r ^ 0 &lt; r &lt; y},{q + 1 &lt; r - y ^ y &gt; 0},2,2
 GATE15P1Q43,CS,,"An algorithm performs (logN)1/2 find operations, N insert operations, (logN)1/2 delete operations,
 and (logN)1/2 decrease-key operations on a set of data items with keys drawn from a linearly
 ordered set. For a delete operation, a pointer is provided to the record that must be deleted.
@@ -107,11 +107,11 @@ is to achieve the best total asymptotic complexity considering all the operation
 GATE15P1Q44,CS,,"Consider a max heap, represented by the array: 40, 30, 20, 10, 15, 16, 17, 8, 4.
 Now consider that a value 35 is inserted into this heap. After insertion, the new heap is",I014,"40, 30, 20, 10, 15, 16, 17, 8, 4, 35","40, 35, 20, 10, 30, 16, 17, 8, 4, 15","40, 30, 20, 10, 35, 16, 17, 8, 4, 15","40, 35, 20, 10, 15, 16, 17, 8, 4, 30",2,2
 GATE15P1Q45,CS,,"Consider the following 2 × 2 matrix A where two elements are unknown and are marked by a and
-b. The eigen values of this matrix are –1 and 7. What are the values of a and b?",I015,"a = 6, b = 4","a = 4, b = 6","a = 3, b = 5","a = 5, b = 3",4,2
+b. The eigen values of this matrix are -1 and 7. What are the values of a and b?",I015,"a = 6, b = 4","a = 4, b = 6","a = 3, b = 5","a = 5, b = 3",4,2
 GATE15P1Q46,CS,,"Let G = (V, E) be a simple undirected graph, and s be a particular vertex in it called the source.
 For x &isin;V, let d(x) denote the shortest distance in G from s to x. A breadth first search (BFS) is
 performed starting at s. Let T be the resultant BFS tree. If (u, v) is an edge of G that is not in T,
-then which one of the following CANNOT be the value of d(u) – d(v)?",,-1,0,1,2,3,2
+then which one of the following CANNOT be the value of d(u) - d(v)?",,-1,0,1,2,3,2
 GATE15P1Q47,CS,,"The binary operator &ne; is defined by the following truth table:
 Which one of the following is true about the binary operator &ne; ?",I016,Both commutative and associative,Commutative but not associative,Not commutative but associative,Neither commutative nor associative,1,2
 GATE15P1Q48,CS,,"Consider an Entity-Relationship (ER) model in which entity sets E1and E2 are connected by an
@@ -140,7 +140,7 @@ if (array [middle] < search)
 first = middle +1;
 else if (array [middle] == search)
 found = True;
-else last = middle – 1;
+else last = middle - 1;
 middle = (first + last)/2;
 }
 if (first > last) notPresent = True;
@@ -162,7 +162,7 @@ return q;
 Which one of the following most closely approximates the return value of the function
 fun1?",,n3,n(logn)2,nlogn,nlog(logn),3,2
 GATE15P1Q54,CS,,"Let an represent the number of bit strings of length n containing two consecutive 1s. What is the
-recurrence relation for an?",,an–2 + an–1 + 2n–2,an–2 + 2an–1 + 2n–2,2an–2 + an–1 + 2n–2,2an–2 + 2an–1 + 2n–2,1,2
+recurrence relation for an?",,an-2 + an-1 + 2n-2,an-2 + 2an-1 + 2n-2,2an-2 + an-1 + 2n-2,2an-2 + 2an-1 + 2n-2,1,2
 GATE15P1Q55,CS,,"A variable x is said to be live at a statement Si in a program if the following three conditions hold
 simultaneously:
 1. There exists a statement Sj that uses x
@@ -213,6 +213,6 @@ GATE15P1Q63,CS,,"Consider a main memory with five page frames and the following 
 8, 2, 3, 9, 1, 6, 3, 8, 9, 3, 6, 2, 1, 3. Which one of the following is true with respect to page
 replacement policies First-In-First Out (FIFO) and Least Recently Used (LRU)?",,Both incur the same number of page faults,FIFO incurs 2 more page faults than LRU,LRU incurs 2 more page faults than FIFO,FIFO incurs 1 more page faults than LRU,1,2
 GATE15P1Q64,CS,,"Consider the operations
-f (X,Y,Z ) = X′YZ + XY′+Y′Z′ and g (X,Y,Z ) = X′YZ + X′YZ′ + XY",,Both {f} and {g} are functionally complete,Only {f} is functionally complete,Only {g} is functionally complete,Neither {f} nor {g} is functionally complete,2,2
+f (X,Y,Z ) = X'YZ + XY'+Y'Z' and g (X,Y,Z ) = X'YZ + X'YZ' + XY",,Both {f} and {g} are functionally complete,Only {f} is functionally complete,Only {g} is functionally complete,Neither {f} nor {g} is functionally complete,2,2
 GATE15P1Q65,CS,,.,I021,0.98,0.99,0.97,0.96,2,2
 ,,,,,,,,,,
