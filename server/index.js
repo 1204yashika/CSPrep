@@ -5,6 +5,7 @@ const conn = require("./db/conn.js");
 const bodyParser = require('body-parser');
 const cookieParser = require("cookie-parser");
 const sessions = require('express-session');
+const path = require('path');
 
 const oneDay = 1000 * 60 * 60 * 24;
 app.use(sessions({
@@ -17,12 +18,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+app.use(express.static(path.join(__dirname, '../client')));
+
 app.get('/', (req, res)=>{
     if (req.session.username) {
         res.redirect("/home");
     }
     else {
-        res.sendFile("/client/index.html", {'root': './'});
+        res.sendFile("/client/mainindex.html", {'root': './'});
     }
     
 });
