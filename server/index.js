@@ -25,6 +25,8 @@ app.get('/', (req, res)=>{
         res.redirect("/home");
     }
     else {
+        req.session.username = "1204yashikaagrawal@gmail.com";
+        req.session.examid = "64327de7489e7a5e888bb5ce";
         res.sendFile("/client/mainindex.html", {'root': './'});
     }
     
@@ -40,7 +42,18 @@ app.get('/home', (req, res)=>{
 });
 app.get('/data',(req,res)=>{
     res.status(200);
-    conn.run().then(results => console.log(results));
+    if(req.session.username){
+        var eid;
+        var rstr;
+        conn.searchexamid(req.session.examid).then(function(results ){
+            conn.createdefaultexam(results[0]["eid"]).then(function(examdata){
+                return res.send(examdata);
+            });
+        });
+    }
+    else{
+        res.redirect("/");
+    }
 });
 
 app.post("/register",(req,res)=>{
@@ -90,9 +103,9 @@ app.listen(3000, (error) =>{
     }
 );
 
-app.post("/takeexam",(req,res)=>{
+app.get("/takeexam",(req,res)=>{
     if (req.session.username) {
-        resp = req.body;
+        resp = req.query;
         var eid = resp["eid"];
         var rand = "";
         if(eid=="CUSTOM"){
