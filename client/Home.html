@@ -40,6 +40,28 @@
       </div>
     </nav>
 
+    <!-- Main Content -->
+    <div class="home-content">
+      <button type="button" class="home-btn" id="start-test" onclick="dropdown()">
+        Start Your Test
+      </button>
+    </div>
+
+    <!-- Dropdown -->
+    <div class="modal3" id="myModal3">
+      <div class="modal-content3">
+        <div class="dropdown" id="dropdown-item">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Choose Your Question Category For GATE Test
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="exam.html" id="button-ga">General Aptitude</a></li>
+            <li><a class="dropdown-item" href="exam.html" id="button-cs">CS</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
      <!-- Footer -->
      <div class="footer" style="margin-top:829px;">
       <div class="footer-copyright">
@@ -47,5 +69,6 @@
         <a href="" class="footer-text"> CSPrep - The GATE To Success</a>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
