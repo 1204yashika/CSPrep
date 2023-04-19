@@ -54,4 +54,3 @@ var data = {}
     var n = document.getElementById("qid").innerHTML;
     dataHtml(parseInt(n)+1);
   }
-  var tarun = "pagal";
