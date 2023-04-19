@@ -349,3 +349,14 @@
   margin: 20px;
   display: none;
 }
+#nxt-btn {
+  padding: 5px 10px 5px;
+  font-size: 30px;
+  font-weight: bold;
+  
+  background: #599bb3;
+  color: #fff;
+  outline: none;
+  border: 2px solid black;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);;
+}

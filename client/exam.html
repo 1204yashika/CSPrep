@@ -23,44 +23,10 @@
     <title>Quiz Page</title>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <img src="logo.png" class="logo" />
-        <a class="navbar-brand" href="">CSPrep</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-3 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link active text-light"
-                aria-current="page"
-                href="about.html"
-                >About</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active text-light"
-                aria-current="page"
-                href="contact.html"
-                >Contact</a
-              >
-            </li>
-          </ul>
-          <div class="button">
-            <button
-              onclick="document.location.href='logout'"
-              class="logout-button"
-            >
-              Logout
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
 
     <!-- Main Content -->
     <div class="que-container">
+      Que.<span id="qno"></span>
       <div id="question"></div>
       <div id="imgs">
         <img src="" style="width: 50%; height: 50%" />
@@ -82,15 +48,10 @@
           <input class="form-check-input" type="radio" name="Options" id="D" />
           <label for="D" class="form-check-label" id="OptionD"></label>
         </div>
-        
+        <span id="qid" hidden></span>
       </div>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer" style="margin-top: 29px; width: 100%">
-      <div class="footer-copyright">
-        © 2023 &nbsp; &nbsp; &nbsp;
-        <a href="" class="footer-text"> CSPrep - The GATE To Success</a>
+      <div class="next-btn">
+        <button type="button" id="nxt-btn" onclick="nxtque()">Next</button>
       </div>
     </div>
     <script src="script.js"></script>
