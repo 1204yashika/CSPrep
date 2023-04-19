@@ -55,7 +55,4 @@ var data = {}
     dataHtml(parseInt(n)+1);
   }
   
-
-  
-
-    
+var s = "Hello";  
