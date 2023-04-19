@@ -25,8 +25,8 @@ app.get('/', (req, res)=>{
         res.redirect("/home");
     }
     else {
-        req.session.username = "1204yashikaagrawal@gmail.com";
-        req.session.examid = "64327de7489e7a5e888bb5ce";
+        // req.session.username = "1204yashikaagrawal@gmail.com";
+        // req.session.examid = "64327de7489e7a5e888bb5ce";
         res.sendFile("/client/mainindex.html", {'root': './'});
     }
     
@@ -105,7 +105,7 @@ app.listen(3000, (error) =>{
 
 app.get("/takeexam",(req,res)=>{
     if (req.session.username) {
-        resp = req.query;
+        var resp = req.query;
         var eid = resp["eid"];
         var rand = "";
         if(eid=="CUSTOM"){

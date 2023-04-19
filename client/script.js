@@ -23,13 +23,15 @@
     // Exam Script
     
     // Fetch JSON data
-    fetch("GATE15P1.json")
+    fetch("data")
+    // fetch("GATE15P1.json")
       .then(response => response.json())
       .then(data => {
     // access the properties of the first object
    // for (let i = 0; i < data.length; i++) {
     //    questions.push(data[i]);
      // }
+    
     const firstQuestion = data[9];
     document.querySelector("#question").innerHTML = firstQuestion.Question;
     document.querySelector("#OptionA").innerHTML = firstQuestion.OptionA;
@@ -46,5 +48,24 @@
   .catch(error => {
     console.error('Error fetching data:', error);
   });
+
+
+function qshtml(qid) {
+  const firstQuestion = data[qid];
+  document.querySelector("#question").innerHTML = firstQuestion.Question;
+  document.querySelector("#OptionA").innerHTML = firstQuestion.OptionA;
+  document.querySelector("#OptionB").innerHTML = firstQuestion.OptionB;
+  document.querySelector("#OptionC").innerHTML = firstQuestion.OptionC;
+  document.querySelector("#OptionD").innerHTML = firstQuestion.OptionD;
+  if(firstQuestion.ImageName!=""){
+      imgs.style.display = "block";
+      str = "Images/"+firstQuestion.ImageName+".png";
+      document.querySelector("#imgs>img").setAttribute("src",str);
+  }
+  else{
+    imgs.style.display = "none";
+  }  
+}
+
 
     
