@@ -24,7 +24,7 @@ var data = {}
     
     // Fetch JSON data
     fetch("data")
-    // fetch("GATE15P1.json")
+    fetch("GATE15P1.json")
       .then(response => response.json())
       .then(d => { data = d;
       dataHtml(0)})
