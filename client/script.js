@@ -23,14 +23,18 @@ var data = {}
     // Exam Script
     
     // Fetch JSON data
-    fetch("data")
-    fetch("GATE15P1.json")
+    function fatchdata(){
+      fetch("data")
+      // fetch("GATE15P1.json")
       .then(response => response.json())
       .then(d => { data = d;
-      dataHtml(0)})
+      dataHtml(0);
+      document.querySelector("#total").innerHTML = data.length;})
       .catch(error => {
         console.log('Error fetching data:', error);
       });
+    }
+    
     // access the properties of the first object
     
   function dataHtml(i2){
