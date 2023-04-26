@@ -24,12 +24,21 @@ var data = {}
     
     // Fetch JSON data
     function fatchdata(){
-      fetch("data")
-      // fetch("GATE15P1.json")
+      // fetch("data")
+      fetch("GATE15P1.json")
       .then(response => response.json())
       .then(d => { data = d;
       dataHtml(0);
-      document.querySelector("#total").innerHTML = data.length;})
+      document.querySelector("#total").innerHTML = data.length;
+      // var l = data.length;
+      var l = 65;
+      for(let i=0; i < l; i++ ) {
+        var s = `<div class="badge-item" id="badge-item">
+        <span class="badge text-bg-warning" id=b-${i+1}>${i+1}</span>
+      </div>`
+      document.querySelector("#con-Badge").innerHTML += s; 
+      }
+    })
       .catch(error => {
         console.log('Error fetching data:', error);
       });
@@ -46,16 +55,24 @@ var data = {}
     document.querySelector("#OptionC").innerHTML = data[i].OptionC;
     document.querySelector("#OptionD").innerHTML = data[i].OptionD;
     document.querySelector("#qid").innerHTML = i;
+    const option = document.getElementById("opt");
     if(data[i].ImageName!=""){
         imgs.style.display = "block";
         str = "Images/"+data[i].ImageName+".png";
         document.querySelector("#imgs>img").setAttribute("src",str);
+        option.style.marginTop = "70px";
+
     }
     else{
       imgs.style.display = "none";
+      option.style.marginTop = "300px";
     }
   }
   function nxtque() {
     var n = document.getElementById("qid").innerHTML;
-    dataHtml(parseInt(n)+1);
+    var n2 = parseInt(n)+1;
+
+    document.querySelector("#b-"+n2+"").classList.remove("text-bg-warning");
+    document.querySelector("#b-"+n2+"").classList.add("text-bg-success");
+    dataHtml(n2);
   }

@@ -23,35 +23,65 @@
     <title>Quiz Page</title>
   </head>
   <body onload="fatchdata()">
-
     <!-- Main Content -->
-    <div class="que-container">
-      <div class="queno">Que.<span id="qno"></span> of <span id="total"></span></div> 
-      <div id="question"></div>
-      <div id="imgs">
-        <img src="" style="width: 50%; height: 50%" />
+    <div class="page-container">
+      <div class="que-container grid-item">
+        <div class="queno">
+          Que.<span id="qno"></span> of <span id="total"></span>
+        </div>
+        <div class="timer" id="timer"></div>
+        <div id="question"></div>
+        <div id="imgs">
+          <img src="" id="imgid" style="min-height: 200px; max-height: 200px; max-width: 300px; min-width: 300px;" />
+        </div>
+        <div class="option" id="opt">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="Options"
+              id="A"
+            />
+            <label for="A" class="form-check-label" id="OptionA"></label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="Options"
+              id="B"
+            />
+            <label for="B" class="form-check-label" id="OptionB"></label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="Options"
+              id="C"
+            />
+            <label for="C" class="form-check-label" id="OptionC"></label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="Options"
+              id="D"
+            />
+            <label for="D" class="form-check-label" id="OptionD"></label>
+          </div>
+          <span id="qid" hidden></span>
+        </div>
+        <div class="next-btn">
+          <button type="button" id="nxt-btn" onclick="nxtque()">Next Question</button>
+        </div>
       </div>
-      <div class="option">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="Options" id="A" />
-          <label for="A" class="form-check-label" id="OptionA"></label>
+      <div class="conBadge grid-item">
+        <div class="boxes" id="con-Badge"></div>
+        <div class="button">
+          <input type="button" name="Submit" value="Submit Your Test" class="sub-btn" />
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="Options" id="B" />
-          <label for="B" class="form-check-label" id="OptionB"></label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="Options" id="C" />
-          <label for="C" class="form-check-label" id="OptionC"></label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="Options" id="D" />
-          <label for="D" class="form-check-label" id="OptionD"></label>
-        </div>
-        <span id="qid" hidden></span>
-      </div>
-      <div class="next-btn">
-        <button type="button" id="nxt-btn" onclick="nxtque()">Next</button>
       </div>
     </div>
     <script src="script.js"></script>
