@@ -418,7 +418,7 @@
 .option {
   display: flex;
   flex-direction: column;
-  margin: 280px 20px 10px;
+  margin: 30px 20px 180px;
   padding-right: 10px;
   min-height: 100px;
   max-height: 250px;
@@ -426,26 +426,15 @@
 }
 .form-check {
   font-size: 12px;
-  width: 50%;
+  width: 70%;
   font-weight: 600;
-  padding: 5px 10px 5px;
+  padding: 10px 10px 10px;
   min-height: fit-content;
-  background-color: #B9E9FC;
-  border: 2px solid #F1F6F9;
+  background-color: #DAF5FF;
   border-radius: 50px;
   cursor: pointer;
+  margin: 10px;
 }
-.form-check:hover {
-  background-color: #eee;
-}
-
-.form-check.selected {
-  background-color: #ccc;
-  color: #fff;
-}
-/* .form-check input[type="radio"]:checked + label {
-  background-color: #ccc;
-} */
 #imgs {
   margin: 30px 30px;
   min-height: 200px;

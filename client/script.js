@@ -76,22 +76,48 @@ function dataHtml(i2) {
   document.querySelector("#OptionC").innerHTML = data[i].OptionC;
   document.querySelector("#OptionD").innerHTML = data[i].OptionD;
   document.querySelector("#qid").innerHTML = i;
+  var op = document.getElementsByClassName("form-check-input");
+  for(let i of op){
+  i.checked = false;
+  }
   const option = document.getElementById("opt");
   if (data[i].ImageName != "") {
     imgs.style.display = "block";
     str = "Images/" + data[i].ImageName + ".png";
     document.querySelector("#imgs>img").setAttribute("src", str);
-    option.style.marginTop = "50px";
+    option.style.marginBottom = "20px";
   } else {
     imgs.style.display = "none";
-    option.style.marginTop = "280px";
+    option.style.marginBottom = "180px";
   }
 }
 function nxtque() {
+  var Qid = document.querySelector(".question").getAttribute('id');
+  console.log(Qid);
+  var opc = document.getElementsByClassName("form-check");
+  for(i of opc){
+    i.style.backgroundColor = "#DAF5FF";
+  }
+  var op = document.getElementsByName("Options");
+  for (let i of op) {
+    if (i.checked == true) {
+      console.log(i.getAttribute('value'));
+    }
+  }
+  // document.location.href='takeexam?eid=GATE15P1&randomstring='
   var n = document.getElementById("qid").innerHTML;
   var n2 = parseInt(n) + 1;
 
   document.querySelector("#b-" + n2 + "").classList.remove("text-bg-warning");
   document.querySelector("#b-" + n2 + "").classList.add("text-bg-success");
   dataHtml(n2);
+}
+
+function checkOption(e){
+  var t = e.parentElement.children;
+  for(i of t){
+    i.style.backgroundColor = "#DAF5FF";
+  }
+  e.children[0].checked = true;
+  e.style.backgroundColor = "#05BFDB";
 }

@@ -41,38 +41,42 @@
           <img src="" id="imgid" style="min-height: 200px; max-height: 200px; max-width: 300px; min-width: 300px;" />
         </div>
         <div class="option" id="opt">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="Options" id="A" style="display: none;"/>
+          <div class="form-check" onclick="checkOption(this)">
+            <input class="form-check-input" type="radio" name="Options" value="1" hidden/>
+            <span>A. </span>
             <label for="A" class="form-check-label" id="OptionA"></label>
           </div>
-          <div class="form-check">
+          <div class="form-check" onclick="checkOption(this)">
             <input
               class="form-check-input"
               type="radio"
               name="Options"
-              id="B"
-              style="display: none;"
+              value="2"
+              hidden
             />
+            <span>B. </span>
             <label for="B" class="form-check-label" id="OptionB"></label>
           </div>
-          <div class="form-check">
+          <div class="form-check" onclick="checkOption(this)">
             <input
               class="form-check-input"
               type="radio"
               name="Options"
-              id="C"
-              style="display: none;"
+              value="3"
+              hidden
             />
+            <span>C. </span>
             <label for="C" class="form-check-label" id="OptionC"></label>
           </div>
-          <div class="form-check">
+          <div class="form-check" onclick="checkOption(this)">
             <input
               class="form-check-input"
               type="radio"
               name="Options"
-              id="D"
-              style="display: none;"
+              value="4"
+              hidden
             />
+            <span>D. </span>
             <label for="D" class="form-check-label" id="OptionD"></label>
           </div>
           <span id="qid" hidden></span>
