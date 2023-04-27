@@ -69,7 +69,8 @@ function fatchdata() {
 function dataHtml(i2) {
   var i = parseInt(i2);
   document.querySelector("#qno").innerHTML = i + 1;
-  document.querySelector("#question").innerHTML = data[i].Question;
+  document.querySelector(".question").innerHTML = data[i].Question;
+  document.querySelector(".question").setAttribute('id',data[i].Qid);
   document.querySelector("#OptionA").innerHTML = data[i].OptionA;
   document.querySelector("#OptionB").innerHTML = data[i].OptionB;
   document.querySelector("#OptionC").innerHTML = data[i].OptionC;
@@ -80,10 +81,10 @@ function dataHtml(i2) {
     imgs.style.display = "block";
     str = "Images/" + data[i].ImageName + ".png";
     document.querySelector("#imgs>img").setAttribute("src", str);
-    option.style.marginTop = "20px";
+    option.style.marginTop = "50px";
   } else {
     imgs.style.display = "none";
-    option.style.marginTop = "250px";
+    option.style.marginTop = "280px";
   }
 }
 function nxtque() {
