@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font-Awesome Icons -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- CSS File Link -->
     <link rel="stylesheet" href="style.css" />
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -26,22 +29,20 @@
     <!-- Main Content -->
     <div class="page-container">
       <div class="que-container grid-item">
-        <div class="queno">
-          Que.<span id="qno"></span> of <span id="total"></span>
+        <div class="top-cont">
+          <div class="queno">
+            Que.<span id="qno"></span> of <span id="total"></span>
+          </div>
+          <div class="timer" id="timer"></div>
         </div>
-        <div class="timer" id="timer"></div>
+        
         <div id="question"></div>
         <div id="imgs">
           <img src="" id="imgid" style="min-height: 200px; max-height: 200px; max-width: 300px; min-width: 300px;" />
         </div>
         <div class="option" id="opt">
           <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="Options"
-              id="A"
-            />
+            <input class="form-check-input" type="radio" name="Options" id="A" style="display: none;"/>
             <label for="A" class="form-check-label" id="OptionA"></label>
           </div>
           <div class="form-check">
@@ -50,6 +51,7 @@
               type="radio"
               name="Options"
               id="B"
+              style="display: none;"
             />
             <label for="B" class="form-check-label" id="OptionB"></label>
           </div>
@@ -59,6 +61,7 @@
               type="radio"
               name="Options"
               id="C"
+              style="display: none;"
             />
             <label for="C" class="form-check-label" id="OptionC"></label>
           </div>
@@ -68,6 +71,7 @@
               type="radio"
               name="Options"
               id="D"
+              style="display: none;"
             />
             <label for="D" class="form-check-label" id="OptionD"></label>
           </div>
@@ -75,6 +79,7 @@
         </div>
         <div class="next-btn">
           <button type="button" id="nxt-btn" onclick="nxtque()">Next Question</button>
+          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
         </div>
       </div>
       <div class="conBadge grid-item">
