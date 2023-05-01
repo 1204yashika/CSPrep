@@ -92,8 +92,9 @@ function dataHtml(i2) {
   }
 }
 function nxtque() {
-  var Qid = document.querySelector(".question").getAttribute('id');
-  console.log(Qid);
+  var qid = document.querySelector(".question").getAttribute('id');
+  var sel;
+  console.log(qid);
   var opc = document.getElementsByClassName("form-check");
   for(i of opc){
     i.style.backgroundColor = "#DAF5FF";
@@ -101,10 +102,11 @@ function nxtque() {
   var op = document.getElementsByName("Options");
   for (let i of op) {
     if (i.checked == true) {
+      sel = i.getAttribute('value');
       console.log(i.getAttribute('value'));
     }
   }
-  // document.location.href='takeexam?eid=GATE15P1&randomstring='
+  document.location.href='submitQuestion?qid='+qid+'&sel='+sel;
   var n = document.getElementById("qid").innerHTML;
   var n2 = parseInt(n) + 1;
 

@@ -40,25 +40,9 @@ app.get('/home', (req, res)=>{
         res.redirect("/");
     }
 });
-app.get('/data',(req,res)=>{
-    res.status(200);
-    if(req.session.username){
-        var eid;
-        var rstr;
-        conn.searchexamid(req.session.examid).then(function(results ){
-            conn.createdefaultexam(results[0]["eid"]).then(function(examdata){
-                return res.send(examdata);
-            });
-        });
-    }
-    else{
-        res.redirect("/");
-    }
-});
 
 app.post("/register",(req,res)=>{
     let data = req.body;
-    data["questions"]={};
     data["_id"]=data["email"];
     delete data["email"];
     conn.addUser(data).then(function(r){
@@ -118,6 +102,33 @@ app.get("/takeexam",(req,res)=>{
             req.session.examid = r2;
             res.sendFile("/client/exam.html", {'root': './'});
         });
+    }
+    else {
+        res.redirect("/");
+    }
+})
+
+app.get('/data',(req,res)=>{
+    res.status(200);
+    if(req.session.username){
+        var eid;
+        var rstr;
+        conn.searchexamid(req.session.examid).then(function(results ){
+            conn.createdefaultexam(results[0]["eid"]).then(function(examdata){
+                return res.send(examdata);
+            });
+        });
+    }
+    else{
+        res.redirect("/");
+    }
+});
+
+
+app.get("/submitQuestion",(req,res)=>{
+    if (req.session.username){
+        var resp = req.query;
+        conn.saveAnswers(req.session.examid,resp).then(r=>r);
     }
     else {
         res.redirect("/");

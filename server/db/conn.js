@@ -50,7 +50,7 @@ async function sendExamData(eid,rand,email){
   var db = await client.db("csprep_db");
   var exams = await db.collection("exams");
   try{
-    var res = await exams.insertOne({eid:eid,rstr:rand,email:email,starttime:"",endtime:"",answers:{}});
+    var res = await exams.insertOne({eid:eid,rstr:rand,email:email,starttime:"",endtime:"",answers:[]});
     return res.insertedId.toString();
   }
   catch(err){
@@ -69,5 +69,15 @@ async function searchexamid(id) {
   return qs;
 }
 
+async function saveAnswers(id,ans){
+  await client.connect();
+  var db = await client.db("csprep_db");
+  var exams = await db.collection("exams");
+  exams.updateOne(
+    { "_id": new ObjectId(id) },
+    { "$push": { "answers": ans } }
+  )
+  return "success";
+}
 
-module.exports = {createdefaultexam, addUser, checkUser, sendExamData, searchexamid};
+module.exports = {createdefaultexam, addUser, checkUser, sendExamData, searchexamid, saveAnswers};
