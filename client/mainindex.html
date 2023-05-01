@@ -1,196 +1,694 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <!-- Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"/>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"></script>
 
-    <title>CSPrep Home Page</title>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <img src="logo.png" class="logo" />
-        <a class="navbar-brand" href="">CSPrep</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-3 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="contact.html">Contact</a>
-            </li>
-          </ul>
-          <div class="button">
-            <button type="button" class="btn btn-outline-light" id="signin" onclick="button2()">Login</button>
-            <button type="button" class="btn btn-light" id="signup" onclick="button1()">Signup</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Icon Font Stylesheet -->
+  <script src="https://kit.fontawesome.com/767515e0a9.js" crossorigin="anonymous"></script>
+
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+
+  <title>CSPrep Home Page</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="mainindex.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+      <h2 class="m-0 text-primary">
+        <i class="fa-solid fa-laptop-code me-3"></i>CSPrep
+      </h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+        <a href="mainindex.html" class="nav-item nav-link active">Home</a>
+        <a href="about.html" class="nav-item nav-link">About</a>
+        <a href="contact.html" class="nav-item nav-link">Contact</a>
+        <a href="faq.html" class="nav-item nav-link">FAQ</a>
+        <a href="profile.html" class="nav-item nav-link">Profile</a>
+        <!-- <div class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                  <div class="dropdown-menu fade-down m-0">
+                      <a href="team.html" class="dropdown-item">Our Team</a>
+                      <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                      <a href="404.html" class="dropdown-item">404 Page</a>
+                  </div>
+              </div> -->
+      </div>
+      <div class="button">
+        <button type="button" class="btn btn-outline-dark" id="signin" onclick="button2()">
+          Login
+        </button>
+        <button type="button" class="btn btn-primary" id="signup" onclick="button1()">
+          Signup
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+
+  <div class="container-fluid p-0 mb-5">
+    <div class="owl-carousel header-carousel position-relative">
+      <div class="owl-carousel-item position-relative">
+        <img class="img-fluid" src="Images/carousel1.jpg" alt="" />
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+          style="background: rgba(24, 29, 56, 0.7)">
+          <div class="container">
+            <div class="row justify-content-start">
+              <div class="col-sm-10 col-lg-8">
+                <h1 class="display-4 text-white animated slideInDown">
+                  CSPrep - The GATE To Success
+                </h1>
+                <p class="fs-5 text-white mb-4 pb-2">
+                  CSPrep is a website that has been designed for students who are preparing
+                  for exams like GATE and UGCNET but do not have enough time to prepare.
+                </p>
+                <button type="button" class="btn btn-primary py-md-2 px-md-3 me-5 animated slideInLeft"
+                  style="font-weight: 500; font-size: 25px; text-transform: uppercase;">Read More</button>
+                <button type="button" class="btn btn-light py-md-2 px-md-3 animated slideInRight content-btn"
+                  id="start-practice" onclick="button3()"
+                  style="font-weight: 700; font-size: 25px; text-transform: uppercase;">Take Exam</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </nav>
-
-    <!-- Main Content -->
-
-    <div class="content">
-      <h2 class="content-heading">CSPrep</h2>
-      <h4 class="content-heading2">The <span class="c-h1">GATE </span>To Success</h4>
-      <button type="button" class="content-btn" id="start-practice" onclick="button3()">Start Practice</button>
     </div>
+  </div>
 
-    <!-- Login/Signup Form -->
+  <!-- About Section Start -->
 
-    <a href="http://localhost:3000/data"></a>
-    <div class="modal" id="myModal1">
-      <div class="modal-content1">
-        <span class="close1">&times;</span>
-        <h3 class="form-heading1">Register</h3>
-        <form id="register">
-          <label for="name">Name:</label><br />
-          <input type="text" name="name" id="name" required /><br />
-          <label for="email">Email:</label><br />
-          <input type="email" name="email" id="email" required /><br />
-          <label for="phone">Phone:</label><br />
-          <input type="tel" id="phone" name="mobile" required /><br />
-          <label for="pass">Password:</label><br />
-          <input type="password" id="pass" name="password" required /><br />
-          <input type="button" onclick="register()" value="Register" /><br />
-        </form>
+  <!-- Header Start -->
+  <div class="col-lg-12 text-center">
+    <h1 class="display-3 animated slideInDown" style="text-transform: uppercase; font-weight: 600; color: #0c6dfd;">
+      About Us</h1>
+  </div>
+  <!-- Header End -->
+
+  <!-- Service Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="service-item text-center pt-3">
+            <div class="p-4">
+              <i class="fa fa-3x fa-laptop-code text-primary mb-4"></i>
+              <h5 class="mb-3">Mock Tests</h5>
+              <p>CSPrep can offer mock tests that simulate the actual GATE exam environment. These tests can help
+                students get a feel for the exam and identify areas where they need to improve.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="service-item text-center pt-3">
+            <div class="p-4">
+              <i class="fa fa-3x fa-user text-primary mb-4"></i>
+              <h5 class="mb-3">Personalized Performance Analysis</h5>
+              <p>CSPrep can provide personalized performance analysis to its users. This analysis can help students
+                identify their strengths and weaknesses.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="service-item text-center pt-3">
+            <div class="p-4">
+              <i class="fa fa-3x fa-square-poll-vertical text-primary mb-4"></i>
+              <h5 class="mb-3">Analytics and Progress Tracking</h5>
+              <p>CSPrep can provide detailed analytics and progress tracking to its users. This can help students to
+                make informed decisions about their preparation strategy.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+          <div class="service-item text-center pt-3">
+            <div class="p-4">
+              <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+              <h5 class="mb-3">Doubt Clearing Sessions</h5>
+              <p>CSPrep can offer interactive doubt clearing sessions to its users, where students can ask their
+                doubts/questions and get their doubts/questions cleared instantly.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <br />
-    <div class="modal" id="myModal2">
-      <div class="modal-content2">
-        <span class="close2">&times;</span>
-        <h3 class="form-heading1">Login</h3>
-        <form id="login">
-          <label for="email">Email:</label><br />
-          <input type="email" name="email" id="email" /><br />
-          <label for="pass">Password:</label><br />
-          <input type="password" id="pass" name="password" /><br />
-          <input type="button" onclick="login()" value="Login" /><br />
-        </form>
+  </div>
+  <!-- Service End -->
+
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+          <div class="position-relative h-100">
+            <img class="img-fluid position-absolute w-100 h-100 shadow abt" src="Images/carousel4.jpg" alt=""
+              style="object-fit: cover;">
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+          <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+          <h1 class="mb-4">Welcome to CSPrep</h1>
+          <p class="mb-4">Welcome to CSPrep, your one-stop solution for GATE (Graduate Aptitude Test in Engineering)
+            preparation!</p>
+          <p class="mb-4">At CSPrep, we understand the importance of the GATE exam in shaping your career in engineering
+            and technology. That's why we've designed our platform to help you excel in the exam with ease.</p>
+          <div class="row gy-2 gx-4 mb-4">
+            <div class="col-sm-6">
+              <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Mock Tests</p>
+            </div>
+            <div class="col-sm-6">
+              <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Doubt Clearing Session</p>
+            </div>
+            <div class="col-sm-6">
+              <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>User-Friendly Interface</p>
+            </div>
+            <div class="col-sm-6">
+              <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Detailed Analytics</p>
+            </div>
+            <div class="col-sm-6">
+              <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Personalized Performance</p>
+            </div>
+            <div class="col-sm-6">
+              <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Real Exam Environment</p>
+            </div>
+          </div>
+          <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+        </div>
       </div>
     </div>
+  </div>
+  <!-- About Section End -->
 
-    <!-- Footer -->
-    <div class="footer">
-      <div class="footer-copyright">
-        © 2023 &nbsp; &nbsp; &nbsp;
-        <a href="" class="footer-text"> CSPrep - The GATE To Success</a>
+  <!-- Testimonial Start -->
+
+  <!-- Header Start -->
+  <div class="col-lg-12 text-center">
+    <h1 class="display-3 animated slideInDown"
+      style="text-transform: uppercase; font-weight: 600; color: #0c6dfd; margin-bottom: 20px;">
+      Testimonial</h1>
+  </div>
+  <!-- Header End -->
+
+  <section class="testimonial-section">
+    <div class="container">
+      <h2>What Our Students Say</h2>
+      <div class="testimonial-container">
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="testimonial author">
+          <p class="testimonial-text">I've tried other online courses before, but CSPrep is by far the best. The lessons
+            are easy to follow, and the practice exams really helped me prepare for the GATE exam. I highly recommend
+            it!</p>
+          <p class="testimonial-author">John Doe</p>
+        </div>
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="testimonial author">
+          <p class="testimonial-text">I was skeptical about taking an online course, but CSPrep exceeded my
+            expectations. The instructors are knowledgeable and engaging, and the community of students is supportive
+            and helpful. I feel more confident about the GATE exam thanks to CSPrep.</p>
+          <p class="testimonial-author">Jane Smith</p>
+        </div>
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="testimonial author">
+          <p class="testimonial-text">I appreciate how CSPrep breaks down complex concepts into easy-to-understand
+            explanations. The interactive quizzes and exercises are also very helpful in reinforcing what I've learned.
+            I highly recommend CSPrep to anyone studying for the GATE exam.</p>
+          <p class="testimonial-author">Bob Johnson</p>
+        </div>
       </div>
     </div>
+  </section>
 
-  </body>
+  <!-- Testimonial End -->
 
-  <script>
-    //Login/Signup Form
+  <!-- Start FAQ -->
+  <!-- Header Start -->
+  <div class="col-lg-12 text-center">
+    <h1 class="display-3 animated slideInDown"
+      style="text-transform: uppercase; font-weight: 600; color: #0c6dfd; margin-bottom: 40px;">
+      FAQ</h1>
+  </div>
+  <!-- Header End -->
 
-    function register() {
-      var j = $("#register").serialize();
-      $.ajax({
-        url: "/register",
-        data: j,
-        method: "post",
-        success: function (data) {
-          alert("You are registered. Please login...");
-          document.location.href = "/";
-        },
-        error: function (x, y) {
-          alert(x.responseText);
-        },
-      });
-    }
-    function login() {
-      var j = $("#login").serialize();
-      $.ajax({
-        url: "/login",
-        data: j,
-        method: "post",
-        success: function (data) {
-          document.location.href = "home";
-        },
-        error: function (x, y) {
-          alert(x.responseText);
-        },
-      });
-    }
+  <div class="cntnr">
+    <div class="faq">
+      <h2 class="faq-title">What is GATE?</h2>
+      <p class="faq-content">GATE (Graduate Aptitude Test in Engineering) is a national level exam for admission into
+        M.Tech/Ph.D. programs in engineering, technology, and architecture.</p>
+    </div>
+    <div class="faq">
+      <h2 class="faq-title">When is the GATE exam conducted?</h2>
+      <p class="faq-content">The GATE exam is usually conducted in February every year.</p>
+    </div>
+    <div class="faq">
+      <h2 class="faq-title">What is the exam pattern for GATE?</h2>
+      <p class="faq-content">The GATE exam consists of multiple-choice questions (MCQs) and numerical answer type (NAT)
+        questions. The duration of the exam is 3 hours.</p>
+    </div>
+    <div class="faq">
+      <h2 class="faq-title">How can I apply for GATE?</h2>
+      <p class="faq-content">You can apply for GATE through the official website of the exam conducting authority. The
+        application process usually starts in September every year.</p>
+    </div>
+    <div class="faq">
+      <h2 class="faq-title">How can CSPrep website help users for the preparation of GATE exam?</h2>
+      <p class="faq-content">CSPrep is an online learning platform that provides high-quality study materials and
+        practice tests for GATE aspirants. The platform offers a comprehensive curriculum covering all the topics
+        required for the exam, as well as personalized study plans and progress tracking tools. In addition, CSPrep
+        provides expert guidance and support through its team of experienced educators, who are available to answer any
+        questions or doubts that users may have. By using CSPrep, users can enhance their knowledge, build their
+        confidence, and maximize their chances of success in the GATE exam.</p>
+    </div>
+  </div>
 
-    // Modal
+  <div class="cntnr2">
+    <form id="new-question-form">
+      <label for="new-question">Ask your question:</label>
+      <input type="text" id="new-question" name="new-question" required>
+      <label for="new-answer">Provide an answer:</label>
+      <textarea id="new-answer" name="new-answer" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 
-    // Get the modal
-    var modal2 = document.getElementById("myModal2");
-    var modal1 = document.getElementById("myModal1");
+  <!-- End FAQ -->
 
-    // Get the button that opens the modal
-    var btn2 = document.getElementById("signin");
-    var btn1 = document.getElementById("signup");
-    var btn3 = document.getElementById("start-practice");
+  <!-- Contact Start -->
+  <!-- Header Start -->
+  <div class="col-lg-12 text-center">
+    <h1 class="display-3 animated slideInDown"
+      style="text-transform: uppercase; font-weight: 600; color: #0c6dfd; margin-bottom: 40px;">
+      Contact us</h1>
+  </div>
+  <!-- Header End -->
+  <div class="container-xxl py-5" style="background-color: #f9f9f9;">
+    <div class="container .contact-container">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h1 class="mb-5" style="margin-bottom: 20px;">Contact For Any Query</h1>
+      </div>
+      <div class="row g-4 justify-content-md-center">
+        <div class="col-lg-8 col-md-6  wow fadeInUp" data-wow-delay="0.1s">
+          <h5>Get In Touch</h5>
+          <div class="d-flex align-items-center mb-3">
+            <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+              style="width: 50px; height: 50px;">
+              <i class="fa fa-map-marker-alt text-white"></i>
+            </div>
+            <div class="ms-3">
+              <h5 class="text-primary">Office</h5>
+              <p class="mb-0">Mathura, Uttar Pradesh, India</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+              style="width: 50px; height: 50px;">
+              <i class="fa fa-phone-alt text-white"></i>
+            </div>
+            <div class="ms-3">
+              <h5 class="text-primary">Mobile</h5>
+              <p class="mb-0">+012 345 67890</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+              style="width: 50px; height: 50px;">
+              <i class="fa fa-envelope-open text-white"></i>
+            </div>
+            <div class="ms-3">
+              <h5 class="text-primary">Email</h5>
+              <p class="mb-0">info@example.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="name" placeholder="Your Name">
+                  <label for="name">Your Name</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="email" placeholder="Your Email">
+                  <label for="email">Your Email</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="subject" placeholder="Subject">
+                  <label for="subject">Subject</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a message here" id="message"
+                    style="height: 150px"></textarea>
+                  <label for="message">Message</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Contact End -->
 
-    // Get the <span> element that closes the modal
-    var span2 = document.getElementsByClassName("close2")[0];
-    var span1 = document.getElementsByClassName("close1")[0];
+  <!-- Login / Registration Form -->
+  <!-- Header Start -->
+  <div class="col-lg-12 text-center">
+    <h1 class="display-3 animated slideInDown"
+      style="text-transform: uppercase; font-weight: 600; color: #0c6dfd; margin-bottom: 40px; margin-top: 40px;">
+      Register Now</h1>
+  </div>
+  <!-- Header End -->
+  <div class="container4">
+    <div class="container5">
+      <input type="checkbox" id="flip">
+      <div class="cover">
+        <div class="front">
+          <img src="Images/carousel7.jpg" alt="">
+          <!-- <div class="text">
+            <span class="text-1">Start Again And <br> Test Yourself</span>
+            <span class="text-2">Let's get connected</span>
+          </div> -->
+        </div>
+        <div class="back">
+          <img class="backImg" src="Images/carousel6.jpg" alt="">
+          <!-- <div class="text">
+            <span class="text-1">Start Your Journey<br> with one step</span>
+            <span class="text-2">Let's get started</span>
+          </div> -->
+        </div>
+      </div>
+      <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Login</div>
+            <form action="#">
+              <div class="input-boxes">
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input type="text" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="text"><a href="#">Forgot password?</a></div>
+                <div class="button input-box">
+                  <input type="submit" value="Submit">
+                </div>
+                <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
+              </div>
+            </form>
+          </div>
+          <div class="signup-form">
+            <div class="title">Signup</div>
+            <form action="#">
+              <div class="input-boxes">
+                <div class="input-box">
+                  <i class="fas fa-user"></i>
+                  <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input type="text" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="button input-box">
+                  <input type="submit" value="Submit">
+                </div>
+                <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    // When the user clicks on the button, open the modal
-    function button2() {
-      btn2.onclick = function () {
-        modal2.style.display = "block";
-      };
-      // When the user clicks on <span> (x), close the modal
-      span2.onclick = function () {
+
+  <!-- Login/Signup Form -->
+
+  <a href="http://localhost:3000/data"></a>
+  <div class="modal" id="myModal1">
+    <div class="modal-content1">
+      <span class="close1">&times;</span>
+      <h3 class="form-heading1">Register</h3>
+      <form id="register">
+        <label for="name">Name:</label><br />
+        <input type="text" name="name" id="name" required /><br />
+        <label for="email">Email:</label><br />
+        <input type="email" name="email" id="email" required /><br />
+        <label for="phone">Phone:</label><br />
+        <input type="tel" id="phone" name="mobile" required /><br />
+        <label for="pass">Password:</label><br />
+        <input type="password" id="pass" name="password" required /><br />
+        <input type="button" onclick="register()" value="Register" /><br />
+      </form>
+    </div>
+  </div>
+  <br />
+  <div class="modal" id="myModal2">
+    <div class="modal-content2">
+      <span class="close2">&times;</span>
+      <h3 class="form-heading1">Login</h3>
+      <form id="login">
+        <label for="email">Email:</label><br />
+        <input type="email" name="email" id="email" /><br />
+        <label for="pass">Password:</label><br />
+        <input type="password" id="pass" name="password" /><br />
+        <input type="button" onclick="login()" value="Login" /><br />
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-white mb-3">Quick Link</h4>
+          <a class="btn btn-link" href="about.html">About Us</a>
+          <a class="btn btn-link" href="contact.html">Contact Us</a>
+          <a class="btn btn-link" href="privacypolicy.html">Privacy Policy</a>
+          <a class="btn btn-link" href="TandC.html">Terms & Condition</a>
+          <a class="btn btn-link" href="faq.html">FAQs & Help</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-white mb-3">Contact</h4>
+          <p class="mb-2">
+            <i class="fa fa-map-marker-alt me-3"></i>Mathura, Uttar Pradesh,
+            India
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-phone-alt me-3"></i>+012 345 67890
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-envelope me-3"></i>info@example.com
+          </p>
+          <div class="d-flex pt-2">
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <h4 class="text-white mb-3">Register</h4>
+          <p>Register Now on our platoform and open your GATE to Success.</p>
+          <div class="position-relative" style="max-width: 400px">
+            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="email" placeholder="Your email" />
+            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+              SignUp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy;
+            <a class="" href="" style="text-decoration: none">CSPrep</a>, All
+            Right Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="footer-menu">
+              <a href="" style="text-decoration: none">Home</a>
+              <a href="" style="text-decoration: none">Cookies</a>
+              <a href="" style="text-decoration: none">Help</a>
+              <a href="" style="text-decoration: none">FQAs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+</body>
+
+<script>
+  //Login/Signup Form
+
+  function register() {
+    var j = $("#register").serialize();
+    $.ajax({
+      url: "/register",
+      data: j,
+      method: "post",
+      success: function (data) {
+        alert("You are registered. Please login...");
+        document.location.href = "/";
+      },
+      error: function (x, y) {
+        alert(x.responseText);
+      },
+    });
+  }
+  function login() {
+    var j = $("#login").serialize();
+    $.ajax({
+      url: "/login",
+      data: j,
+      method: "post",
+      success: function (data) {
+        document.location.href = "home";
+      },
+      error: function (x, y) {
+        alert(x.responseText);
+      },
+    });
+  }
+
+  // Modal
+
+  // Get the modal
+  var modal2 = document.getElementById("myModal2");
+  var modal1 = document.getElementById("myModal1");
+
+  // Get the button that opens the modal
+  var btn2 = document.getElementById("signin");
+  var btn1 = document.getElementById("signup");
+  var btn3 = document.getElementById("start-practice");
+
+  // Get the <span> element that closes the modal
+  var span2 = document.getElementsByClassName("close2")[0];
+  var span1 = document.getElementsByClassName("close1")[0];
+
+  // When the user clicks on the button, open the modal
+  function button2() {
+    btn2.onclick = function () {
+      modal2.style.display = "block";
+    };
+    // When the user clicks on <span> (x), close the modal
+    span2.onclick = function () {
+      modal2.style.display = "none";
+    };
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal2) {
         modal2.style.display = "none";
-      };
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal2) {
-          modal2.style.display = "none";
-        }
-      };
-    }
-    function button1() {
-      btn1.onclick = function () {
-        modal1.style.display = "block";
-      };
-      // When the user clicks on <span> (x), close the modal
-      span1.onclick = function () {
+      }
+    };
+  }
+  function button1() {
+    btn1.onclick = function () {
+      modal1.style.display = "block";
+    };
+    // When the user clicks on <span> (x), close the modal
+    span1.onclick = function () {
+      modal1.style.display = "none";
+    };
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal1) {
         modal1.style.display = "none";
-      };
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal1) {
-          modal1.style.display = "none";
-        }
-      };
-    }
-    function button3() {
-      btn3.onclick = function () {
-        modal2.style.display = "block";
-      };
-      // When the user clicks on <span> (x), close the modal
-      span2.onclick = function () {
+      }
+    };
+  }
+  function button3() {
+    btn3.onclick = function () {
+      modal2.style.display = "block";
+    };
+    // When the user clicks on <span> (x), close the modal
+    span2.onclick = function () {
+      modal2.style.display = "none";
+    };
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal2) {
         modal2.style.display = "none";
-      };
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal2) {
-          modal2.style.display = "none";
-        }
-      };
-    }
-  </script>
+      }
+    };
+  }
+  const faqs = document.querySelectorAll('.faq');
+
+  faqs.forEach(faq => {
+    const title = faq.querySelector('.faq-title');
+    const content = faq.querySelector('.faq-content');
+
+    title.addEventListener('click', () => {
+      faq.classList.toggle('active');
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+
+  const form = document.querySelector('#new-question-form');
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const title = form.querySelector('input').value;
+    const content = form.querySelector('textarea').value;
+
+    const faq = document.createElement('div');
+    faq.className = 'faq';
+
+    const faqTitle = document.createElement('h2');
+    faqTitle.className = 'faq-title';
+    faqTitle.innerText = title;
+
+    const faqContent = document.createElement('p');
+    faqContent.className = 'faq-content';
+    faqContent.innerText = content;
+
+    faq.appendChild(faqTitle);
+    faq.appendChild(faqContent);
+
+    form.parentNode.insertBefore(faq, form);
+
+    form.querySelector('input').value = '';
+    form.querySelector('textarea').value = '';
+  });
+
+</script>
+
 </html>

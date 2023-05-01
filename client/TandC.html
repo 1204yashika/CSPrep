@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Icon Font Stylesheet -->
+    <script src="https://kit.fontawesome.com/767515e0a9.js" crossorigin="anonymous"></script>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <title>Terms and Conditions Page</title>
+</head>
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+header {
+  background-color: #0077b6;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #f2f2f2;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+ul {
+  margin-bottom: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #f2f2f2;
+  color: #666;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #0077b6;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#back-to-top:hover {
+  color: #fff;
+  background-color: #0077b6;
+}
+
+@media screen and (max-width: 768px) {
+   
+  main {
+    padding: 10px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="mainindex.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary">
+                <i class="fa-solid fa-laptop-code me-3"></i>CSPrep
+            </h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="mainindex.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="faq.html" class="nav-item nav-link">FAQ</a>
+                <a href="profile.html" class="nav-item nav-link">Profile</a>
+            </div>
+            <div class="button">
+                <button type="button" class="btn btn-outline-dark" id="signin" onclick="button2()">
+                    Login
+                </button>
+                <button type="button" class="btn btn-primary" id="signup" onclick="button1()">
+                    Signup
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+         
+        <main>
+            <section>
+                <h2>Terms and Conditions</h2>
+                <p>Welcome to CSPrep! These terms and conditions outline the rules and regulations for the use of
+                    CSPrep's website.</p>
+                <p>By accessing this website we assume you accept these terms and conditions in full. Do not continue to
+                    use CSPrep's website if you do not accept all of the terms and conditions stated on this page.</p>
+                <h3>License</h3>
+                <p>Unless otherwise stated, CSPrep and/or its licensors own the intellectual property rights in the
+                    website and material on the website. Subject to the license below, all these intellectual property
+                    rights are reserved.</p>
+                <p>You may view, download for caching purposes only, and print pages from the website for your own
+                    personal use, subject to the restrictions set out below and elsewhere in these terms and conditions.
+                </p>
+                <p>You must not:</p>
+                <ul>
+                    <li>republish material from this website (including republication on another website);</li>
+                    <li>sell, rent, or sub-license material from the website;</li>
+                    <li>show any material from the website in public;</li>
+                    <li>reproduce, duplicate, copy, or otherwise exploit material on our website for commercial
+                        purposes;</li>
+                    <li>edit or modify any material on the website; or</li>
+                    <li>redistribute material from this website except for content specifically and expressly made
+                        available for redistribution.</li>
+                </ul>
+                <h3>Acceptable use</h3>
+                <p>You must not use CSPrep's website in any way that causes, or may cause, damage to the website or
+                    impairment of the availability or accessibility of the website, or in any way which is unlawful,
+                    illegal, fraudulent or harmful, or in connection with any unlawful, illegal, fraudulent or harmful
+                    purpose or activity.</p>
+                <h3>Disclaimer</h3>
+                <p>The materials on CSPrep's website are provided on an 'as is' basis. CSPrep makes no warranties,
+                    expressed or implied, and hereby disclaims and negates all other warranties including, without
+                    limitation, implied warranties or conditions of merchantability, fitness for a particular purpose,
+                    or non-infringement of intellectual property or other violation of rights.</p>
+                <h3>Modifications</h3>
+                <p>CSPrep may revise these terms and conditions from time-to-time. Revised terms and conditions will
+                    apply to the use of this website from the date of the publication of the revised terms and
+                    conditions on our website.</p>
+                <h3>Governing Law</h3>
+                <p>These terms and conditions will be governed by and construed in accordance with the laws of the State
+                    of California, USA, and any disputes relating to these terms and conditions will be subject to the
+                    jurisdiction of the courts located in the State of California, USA.</p>
+                <h3>Contact Us</h3>
+                <p>If you have any questions about these terms and conditions, please contact us by email at
+                    support@csprep.com.</p>
+            </section>
+        </main>
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="text-white mb-3">Quick Link</h4>
+                        <a class="btn btn-link" href="about.html">About Us</a>
+                        <a class="btn btn-link" href="contact.html">Contact Us</a>
+                        <a class="btn btn-link" href="privacypolicy.html">Privacy Policy</a>
+                        <a class="btn btn-link" href="TandC.html">Terms & Condition</a>
+                        <a class="btn btn-link" href="faq.html">FAQs & Help</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="text-white mb-3">Contact</h4>
+                        <p class="mb-2">
+                            <i class="fa fa-map-marker-alt me-3"></i>Mathura, Uttar Pradesh,
+                            India
+                        </p>
+                        <p class="mb-2">
+                            <i class="fa fa-phone-alt me-3"></i>+012 345 67890
+                        </p>
+                        <p class="mb-2">
+                            <i class="fa fa-envelope me-3"></i>info@example.com
+                        </p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <h4 class="text-white mb-3">Register</h4>
+                        <p>Register Now on our platoform and open your GATE to Success.</p>
+                        <div class="position-relative" style="max-width: 400px">
+                            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="email"
+                                placeholder="Your email" />
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+                                SignUp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy;
+                            <a class="" href="" style="text-decoration: none">CSPrep</a>, All
+                            Right Reserved.
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="" style="text-decoration: none">Home</a>
+                                <a href="" style="text-decoration: none">Cookies</a>
+                                <a href="" style="text-decoration: none">Help</a>
+                                <a href="" style="text-decoration: none">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+    </body>
+
+    </html>
