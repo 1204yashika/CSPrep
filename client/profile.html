@@ -42,24 +42,11 @@
         <a href="mainindex.html" class="nav-item nav-link">Home</a>
         <a href="about.html" class="nav-item nav-link">About</a>
         <a href="contact.html" class="nav-item nav-link">Contact</a>
-        <a href="faq.html" class="nav-item nav-link">FAQ</a>
-        <a href="profile.html" class="nav-item nav-link active">Profile</a>
-        <!-- <div class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                  <div class="dropdown-menu fade-down m-0">
-                      <a href="team.html" class="dropdown-item">Our Team</a>
-                      <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                      <a href="404.html" class="dropdown-item">404 Page</a>
-                  </div>
-              </div> -->
+        <a href="#" class="nav-item nav-link" onclick="document.location.href = 'faq'">FAQ</a>
+        <a href="#" class="nav-item nav-link" onclick="document.location.href = 'profile'">Profile</a>
       </div>
-      <div class="button">
-        <button type="button" class="btn btn-outline-dark" id="signin" onclick="button2()">
-          Login
-        </button>
-        <button type="button" class="btn btn-primary" id="signup" onclick="button1()">
-          Signup
-        </button>
-      </div>
+        <div class="button">
+          <button class="btn btn-primary" onclick="document.location.href='logout'" class="logout-button">Logout</button>
+        </div>
     </div>
   </nav>

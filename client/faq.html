@@ -48,17 +48,12 @@
         <a href="mainindex.html" class="nav-item nav-link">Home</a>
         <a href="about.html" class="nav-item nav-link">About</a>
         <a href="contact.html" class="nav-item nav-link">Contact</a>
-        <a href="faq.html" class="nav-item nav-link active">FAQ</a>
-        <a href="profile.html" class="nav-item nav-link">Profile</a>
+        <a href="#" class="nav-item nav-link" onclick="document.location.href = 'faq'">FAQ</a>
+        <a href="#" class="nav-item nav-link" onclick="document.location.href = 'profile'">Profile</a>
       </div>
-      <div class="button">
-        <button type="button" class="btn btn-outline-dark" id="signin" onclick="button2()">
-          Login
-        </button>
-        <button type="button" class="btn btn-primary" id="signup" onclick="button1()">
-          Signup
-        </button>
-      </div>
+    </div>
+    <div class="button">
+      <button class="btn btn-primary" onclick="document.location.href='logout'" class="logout-button">Logout</button>
     </div>
   </nav>
 

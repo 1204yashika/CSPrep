@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, '../client')));
 
 app.get('/', (req, res)=>{
     if (req.session.username) {
-        res.redirect("/home");
+        res.redirect("/Home");
     }
     else {
         // req.session.username = "1204yashikaagrawal@gmail.com";
@@ -31,10 +31,35 @@ app.get('/', (req, res)=>{
     }
     
 });
-
-app.get('/home', (req, res)=>{
+app.get('/faq', (req, res)=>{
     if (req.session.username) {
-        res.sendFile("/client/home.html", {'root': './'});
+        res.sendFile("/client/faq.html", {'root': './'});
+    }
+    else {
+        // req.session.username = "1204yashikaagrawal@gmail.com";
+        // req.session.examid = "64327de7489e7a5e888bb5ce";
+        res.sendFile("/client/mainindex.html", {'root': './'});
+        res.status(400);
+    }
+    
+});
+
+app.get('/profile', (req, res)=>{
+    if (req.session.username) {
+        res.sendFile("/client/profile.html", {'root': './'});
+    }
+    else {
+        // req.session.username = "1204yashikaagrawal@gmail.com";
+        // req.session.examid = "64327de7489e7a5e888bb5ce";
+        res.sendFile("/client/mainindex.html", {'root': './'});
+        res.status(400);
+    }
+    
+});
+
+app.get('/Home', (req, res)=>{
+    if (req.session.username) {
+        res.sendFile("/client/Home.html", {'root': './'});
     }
     else {
         res.redirect("/");
@@ -66,10 +91,12 @@ app.post("/login",(req,res)=>{
             res.status(200);
             req.session.username = data["_id"];
             res.send(resp);
+            console.log(resp);
         }
         else{
             res.status(400);
             res.send(resp);
+            console.log(resp);
         }
     });
     
