@@ -34,23 +34,24 @@ function fatchdata() {
       // var l = data.length;
 
       // Timer
-      let totalQue = data.length;
-      let secondsLeft = totalQue * 60;
+      let duration = 3 * 60 * 60;
 
       function updateTime() {
         let timerDisplay = document.getElementById("timer");
-        let minutes = Math.floor(secondsLeft / 60);
-        let seconds = secondsLeft % 60;
-        timerDisplay.innerHTML = `${minutes}:${
-          seconds < 65 ? "0" : ""
-        }${seconds}`;
-        secondsLeft--;
-        if (secondsLeft < 0) {
+        let hours = Math.floor(duration / 3600)
+        let minutes = Math.floor((duration % 3600) / 60);
+        let seconds = duration % 60;
+        timerDisplay.innerHTML = `${hours}:${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+        duration--;
+        if (duration < 0) {
           alert("Time Out");
           clearInterval(timerInterval);
         }
       }
       let timerInterval = setInterval(updateTime, 1000);
+
+      // Badge Color Changing
+
       var l = 65;
       for (let i = 0; i < l; i++) {
         var s = `<div class="badge-item" id="badge-item">
@@ -59,67 +60,152 @@ function fatchdata() {
         document.querySelector("#con-Badge").innerHTML += s;
       }
     })
+
+    // JSON Fetching Error
+
     .catch((error) => {
       console.log("Error fetching data:", error);
     });
 }
 
-// access the properties of the first object
+// access the properties of the objects
 
 function dataHtml(i2) {
   var i = parseInt(i2);
   document.querySelector("#qno").innerHTML = i + 1;
   document.querySelector(".question").innerHTML = data[i].Question;
-  document.querySelector(".question").setAttribute('id',data[i].Qid);
+  document.querySelector(".question").setAttribute("id", data[i].Qid);
   document.querySelector("#OptionA").innerHTML = data[i].OptionA;
   document.querySelector("#OptionB").innerHTML = data[i].OptionB;
   document.querySelector("#OptionC").innerHTML = data[i].OptionC;
   document.querySelector("#OptionD").innerHTML = data[i].OptionD;
   document.querySelector("#qid").innerHTML = i;
+
+  // Uncheck the option value
   var op = document.getElementsByClassName("form-check-input");
-  for(let i of op){
-  i.checked = false;
+  for (let i of op) {
+    i.checked = false;
   }
+
+  // Showing image on the window
   const option = document.getElementById("opt");
   if (data[i].ImageName != "") {
     imgs.style.display = "block";
     str = "Images/" + data[i].ImageName + ".png";
     document.querySelector("#imgs>img").setAttribute("src", str);
-    option.style.marginBottom = "20px";
+    option.style.marginBottom = "0px";
   } else {
     imgs.style.display = "none";
-    option.style.marginBottom = "180px";
+    option.style.marginBottom = "214px";
   }
 }
+
+// Next Button
 function nxtque() {
+<<<<<<< HEAD
   var qid = document.querySelector(".question").getAttribute('id');
   var sel;
   console.log(qid);
+=======
+  var Qid = document.querySelector(".question").getAttribute("id");
+  console.log(Qid);
+>>>>>>> 36f98e1d328d7be672f81cd90adf90d28ef9e0ec
   var opc = document.getElementsByClassName("form-check");
-  for(i of opc){
+  for (i of opc) {
     i.style.backgroundColor = "#DAF5FF";
   }
   var op = document.getElementsByName("Options");
   for (let i of op) {
     if (i.checked == true) {
+<<<<<<< HEAD
       sel = i.getAttribute('value');
       console.log(i.getAttribute('value'));
+=======
+      console.log(i.getAttribute("value"));
+>>>>>>> 36f98e1d328d7be672f81cd90adf90d28ef9e0ec
     }
   }
   document.location.href='submitQuestion?qid='+qid+'&sel='+sel;
   var n = document.getElementById("qid").innerHTML;
   var n2 = parseInt(n) + 1;
 
+  // Changing badges classes
   document.querySelector("#b-" + n2 + "").classList.remove("text-bg-warning");
   document.querySelector("#b-" + n2 + "").classList.add("text-bg-success");
   dataHtml(n2);
 }
 
-function checkOption(e){
+// Changing color of the checked option
+function checkOption(e) {
   var t = e.parentElement.children;
-  for(i of t){
+  for (i of t) {
     i.style.backgroundColor = "#DAF5FF";
   }
   e.children[0].checked = true;
   e.style.backgroundColor = "#05BFDB";
 }
+
+
+(function ($) {
+  "use strict";
+
+
+  // Sticky Navbar
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 300) {
+      $('.sticky-top').css('top', '0px');
+    } else {
+      $('.sticky-top').css('top', '-100px');
+    }
+  });
+
+  // Testimonials carousel
+   // Smooth scroll to testimonial section when clicking on "Read More" button in hero section
+document.querySelector('.hero-section button').addEventListener('click', function() {
+  document.querySelector('.testimonial-section').scrollIntoView({ behavior: 'smooth' });
+});
+
+    
+})(jQuery);
+
+// FAQ Section
+
+const faqs = document.querySelectorAll('.faq');
+
+faqs.forEach(faq => {
+  const title = faq.querySelector('.faq-title');
+  const content = faq.querySelector('.faq-content');
+
+  title.addEventListener('click', () => {
+    faq.classList.toggle('active');
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+  });
+});
+
+const form = document.querySelector('#new-question-form');
+
+form.addEventListener('submit', event => {
+  event.preventDefault();
+
+  const title = form.querySelector('input').value;
+  const content = form.querySelector('textarea').value;
+
+  const faq = document.createElement('div');
+  faq.className = 'faq';
+
+  const faqTitle = document.createElement('h2');
+  faqTitle.className = 'faq-title';
+  faqTitle.innerText = title;
+
+  const faqContent = document.createElement('p');
+  faqContent.className = 'faq-content';
+  faqContent.innerText = content;
+
+  faq.appendChild(faqTitle);
+  faq.appendChild(faqContent);
+
+  form.parentNode.insertBefore(faq, form);
+
+  form.querySelector('input').value = '';
+  form.querySelector('textarea').value = '';
+});
