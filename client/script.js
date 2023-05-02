@@ -148,12 +148,7 @@ function checkOption(e) {
     }
   });
 
-  // Testimonials carousel
-   // Smooth scroll to testimonial section when clicking on "Read More" button in hero section
-document.querySelector('.hero-section button').addEventListener('click', function() {
-  document.querySelector('.testimonial-section').scrollIntoView({ behavior: 'smooth' });
-});
-
+  
     
 })(jQuery);
 

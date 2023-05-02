@@ -3,22 +3,26 @@
 
 :root {
   --primary: #0c6dfd;
-  --light: #f0fbfc;
+  --light: #f0f0f0;
   --dark: #181d38;
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+#icon {
+  width: 30px;
+  cursor: pointer;
+  margin-right: 10px;
+}
 /* Navbar Styling Start */
 
 .navbar-light .navbar-nav .nav-link {
   margin-right: 30px;
   padding: 10px 20px;
-  color: #ffffff;
+  color: var(--light);
   font-size: 15px;
   border-radius: 5px;
   text-transform: uppercase;
@@ -38,7 +42,7 @@
   }
 
   .navbar-light .navbar-nav {
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid var(--light);
   }
 }
 
@@ -425,43 +429,6 @@ h2 .logo {
   width: 30%;
   text-align: center;
 }
-
-/* Main-Content Styling Start */
-
-/* .content, .home-content {
-  text-align: center;
-  margin-top: 100px;
- }
-.content-heading {
-  font-size: 150px;
-  text-transform: uppercase;
-  color: #111;
-}
-.content-heading2 {
-  font-size: 100px;
-  text-transform: uppercase;
-  color: #111;
-}
-.content-heading2 .c-h1 {
-  color: #599bb3;
-}
-
-.content-btn, .home-btn {
-	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
-	background-color:#599bb3;
-	border-radius: 8px;
-	display: inline-block;
-  border: 1px solid #f1f1f1;
-	cursor: pointer;
-	color:#ffffff;
-	font-family: Arial;
-  text-transform: uppercase;
-	font-size: 30px;
-	font-weight: bold;
-  margin-top: 40px;
-	padding: 13px 32px;
-  text-decoration: none;
-} */
 
 /* Logout Button Styling Start */
 
@@ -883,7 +850,7 @@ h2 .logo {
   border-right: none;
 }
 
-/* Login / Registration Form */
+/* Login or Registration Form */
 
 .container4 {
   /* min-height: 100vh; */
@@ -997,8 +964,8 @@ h2 .logo {
   justify-content: space-between;
 }
 
-.form-content .login-form,
-.form-content .signup-form {
+.form-content .login-form2,
+.form-content .signup-form2 {
   width: calc(100% / 2 - 25px);
 }
 
@@ -1115,20 +1082,204 @@ h2 .logo {
     display: none;
   }
 
-  .form-content .login-form,
-  .form-content .signup-form {
+  .form-content .login-form2,
+  .form-content .signup-form2 {
     width: 100%;
   }
 
-  .form-content .signup-form {
+  .form-content .signup-form2 {
     display: none;
   }
 
-  .container5 #flip:checked~.forms .signup-form {
+  .container5 #flip:checked~.forms .signup-form2 {
     display: block;
   }
 
-  .container5 #flip:checked~.forms .login-form {
+  .container5 #flip:checked~.forms .login-form2 {
     display: none;
   }
+}
+
+/* Category Start */
+
+.category {
+  display: block;
+  position: relative;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 50px auto 20px;
+  width: 90%;
+  height: 100vh;
+}
+.category h3 {
+  text-transform: capitalize;
+  font-size: 40px;
+  text-align: center;
+  margin: 50px 70px 70px 70px;
+}
+.category h4 {
+  text-transform: uppercase;
+  font-size: 27px;
+  font-weight: 600;
+  color: #0c6dfd;
+  text-align: center;
+  margin: 50px 70px 70px 70px;
+}
+.category .ct-span {
+  background-color: #1067eb;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Login form */
+
+.login-form {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  overflow: auto;
+}
+
+.login-form form {
+  background-color: var(--light);
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-form h2 {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.login-form button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: var(--light);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.login-form .cancel-btn {
+  background-color: #f44336;
+}
+
+@media (max-width: 768px) {
+  .login-form {
+    margin-top: 60px;
+  }
+}
+
+/* Registration Form */
+ 
+.signup-form {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  overflow: auto;
+}
+
+.signup-form form {
+  background-color: var(--light);
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.signup-form h2 {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.signup-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.signup-form button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: var(--light);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.signup-form .cancel-btn2 {
+  background-color: #f44336;
+}
+
+@media (max-width: 768px) {
+  .signup-form {
+    margin-top: 60px;
+  }
+}
+
+/* Options */
+
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.options .opt1 {
+  font-size: 25px;
+  margin: 60px;
 }

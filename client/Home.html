@@ -1,74 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <!-- Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"/>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"></script>
-    <title>Home Page</title>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <img src="logo.png" class="logo" />
-        <a class="navbar-brand" href="">CSPrep</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-3 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="contact.html">Contact</a>
-            </li>
-          </ul>
-          <div class="button">
-            <button onclick="document.location.href='logout'" class="logout-button">Logout</button>
-          </div>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Icon Font Stylesheet -->
+  <script src="https://kit.fontawesome.com/767515e0a9.js" crossorigin="anonymous"></script>
+
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+
+  <title>Category Page</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="mainindex.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+      <h2 class="m-0 text-primary">
+        <i class="fa-solid fa-laptop-code me-3"></i>CSPrep
+      </h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+        <a href="mainindex.html" class="nav-item nav-link">Home</a>
+        <a href="about.html" class="nav-item nav-link">About</a>
+        <a href="contact.html" class="nav-item nav-link">Contact</a>
+        <a href="faq.html" class="nav-item nav-link">FAQ</a>
+        <a href="profile.html" class="nav-item nav-link">Profile</a>
       </div>
-    </nav>
-    <button onclick="document.location.href='takeexam?eid=GATE15P1&randomstring='">GATE 2015 P1</button>
-    <!-- Main Content -->
-    <div class="home-content">
+      <div class="button">
+        <button class="btn btn-primary" onclick="document.location.href='logout'" class="logout-button">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="category shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+    <h3>Welcome to CSPrep, your ultimate destination for GATE exam preparation. To get started, please select your desired exam category from the options below. </h3>
+    <h4>Start your GATE exam preparation journey with <span class="ct-span"> CSPrep today!</span></h4>
+    <div class="options">
+        <button type="button" class="btn btn-primary dropdown-toggle opt1" data-bs-toggle="dropdown" aria-expanded="false">
+          Previous Year Question Papers
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">PYQP 2017</a></li>
+          <li><a class="dropdown-item" href="#">PYQP 2018</a></li>
+          <li><a class="dropdown-item" href="#">PYQP 2019</a></li>
+        </ul>
+        <button type="button" class="btn btn-primary dropdown-toggle opt1" data-bs-toggle="dropdown" aria-expanded="false">
+          Customize Questions Test
+        </button>
+        <!-- <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">PYQP 2017</a></li>
+          <li><a class="dropdown-item" href="#">PYQP 2018</a></li>
+          <li><a class="dropdown-item" href="#">PYQP 2019</a></li>
+        </ul> -->
+      </div>
+    <!-- <button onclick="document.location.href='takeexam?eid=GATE15P1&randomstring='">GATE 2015 P1</button> -->
+    <!-- <div class="home-content">
       <button type="button" class="home-btn" id="start-test" onclick="dropdown()">
         Start Your Test
       </button>
-    </div>
+    </div> -->
 
     <!-- Dropdown -->
-    <div class="modal3" id="myModal3">
+    <!-- <div class="modal3" id="myModal3">
       <div class="modal-content3">
         <div class="dropdown" id="dropdown-item">
           <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Choose Your Category
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" onclick="document.location.href='takeexam?eid=GATE15P1&randomstring='" id="button-ga">Previous Year Questions</a></li>
+            <li><a class="dropdown-item" onclick="document.location.href='takeexam?eid=GATE15P1&randomstring='"
+                id="button-ga">Previous Year Questions</a></li>
             <li><a class="dropdown-item" href="exam.html" id="button-cs">Online Test</a></li>
           </ul>
         </div>
       </div>
-    </div>
+    </div>  -->
+  </div>
 
-     <!-- Footer -->
-     <div class="footer" style="margin-top:829px;">
-      <div class="footer-copyright">
-        © 2023 &nbsp; &nbsp; &nbsp;
-        <a href="" class="footer-text"> CSPrep - The GATE To Success</a>
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-white mb-3">Quick Link</h4>
+          <a class="btn btn-link" href="about.html">About Us</a>
+          <a class="btn btn-link" href="contact.html">Contact Us</a>
+          <a class="btn btn-link" href="privacypolicy.html">Privacy Policy</a>
+          <a class="btn btn-link" href="TandC.html">Terms & Condition</a>
+          <a class="btn btn-link" href="faq.html">FAQs & Help</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-white mb-3">Contact</h4>
+          <p class="mb-2">
+            <i class="fa fa-map-marker-alt me-3"></i>Mathura, Uttar Pradesh,
+            India
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-phone-alt me-3"></i>+012 345 67890
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-envelope me-3"></i>info@example.com
+          </p>
+          <div class="d-flex pt-2">
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <h4 class="text-white mb-3">Register</h4>
+          <p>Register Now on our platoform and open your GATE to Success.</p>
+          <div class="position-relative" style="max-width: 400px">
+            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="email" placeholder="Your email" />
+            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+              SignUp
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+    <div class="container">
+      <div class="copyright">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy;
+            <a class="" href="" style="text-decoration: none">CSPrep</a>, All
+            Right Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="footer-menu">
+              <a href="" style="text-decoration: none">Home</a>
+              <a href="" style="text-decoration: none">Cookies</a>
+              <a href="" style="text-decoration: none">Help</a>
+              <a href="" style="text-decoration: none">FQAs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer End -->
+  <script src="script.js"></script>
+</body>
+
 </html>
