@@ -102,14 +102,9 @@ function dataHtml(i2) {
 
 // Next Button
 function nxtque() {
-<<<<<<< HEAD
   var qid = document.querySelector(".question").getAttribute('id');
-  var sel;
+  var sel="";
   console.log(qid);
-=======
-  var Qid = document.querySelector(".question").getAttribute("id");
-  console.log(Qid);
->>>>>>> 36f98e1d328d7be672f81cd90adf90d28ef9e0ec
   var opc = document.getElementsByClassName("form-check");
   for (i of opc) {
     i.style.backgroundColor = "#DAF5FF";
@@ -117,12 +112,8 @@ function nxtque() {
   var op = document.getElementsByName("Options");
   for (let i of op) {
     if (i.checked == true) {
-<<<<<<< HEAD
       sel = i.getAttribute('value');
       console.log(i.getAttribute('value'));
-=======
-      console.log(i.getAttribute("value"));
->>>>>>> 36f98e1d328d7be672f81cd90adf90d28ef9e0ec
     }
   }
   document.location.href='submitQuestion?qid='+qid+'&sel='+sel;
