@@ -54,15 +54,42 @@
               </div> -->
       </div>
       <div class="button">
-        <button type="button" class="btn btn-outline-dark" id="signin" onclick="button2()">
+        <button type="button" class="btn btn-outline-dark login-btn" id="signin">
           Login
         </button>
-        <button type="button" class="btn btn-primary" id="signup" onclick="button1()">
+        <button type="button" class="btn btn-primary signup-btn" id="signup">
           Signup
         </button>
       </div>
     </div>
   </nav>
+
+  <a href="http://localhost:3000/data"></a>
+  <div class="login-form">
+    <form id="login">
+      <h2>Login</h2>
+      <label for="email">Email: </label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <label for="password">Password: </label>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <button type="submit" onclick="login()">Login</button>
+      <button type="button" class="cancel-btn">Cancel</button>
+    </form>
+  </div>
+
+  <div class="signup-form">
+    <form id="register">
+      <h2>Register</h2>
+      <label for="username">Name: </label>
+      <input type="text" id="username" name="username" placeholder="Enter Name" required>
+      <label for="email">Email: </label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <label for="password">Password: </label>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <button type="submit" onclick="register()">Signup</button>
+      <button type="button" class="cancel-btn2">Cancel</button>
+    </form>
+  </div>
 
   <!-- Main Content -->
 
@@ -84,8 +111,7 @@
                 </p>
                 <button type="button" class="btn btn-primary py-md-2 px-md-3 me-5 animated slideInLeft"
                   style="font-weight: 500; font-size: 25px; text-transform: uppercase;">Read More</button>
-                <button type="button" class="btn btn-light py-md-2 px-md-3 animated slideInRight content-btn"
-                  id="start-practice" onclick="button3()"
+                <button type="button" class="btn btn-light py-md-2 px-md-3 animated slideInRight content-btn login-btn2"
                   style="font-weight: 700; font-size: 25px; text-transform: uppercase;">Take Exam</button>
               </div>
             </div>
@@ -99,7 +125,8 @@
 
   <!-- Header Start -->
   <div class="col-lg-12 text-center">
-    <h1 class="display-3 animated slideInDown" style="text-transform: uppercase; font-weight: 600; color: #0c6dfd;">
+    <h1 class="display-3 animated slideInDown"
+      style="text-transform: uppercase; font-weight: 600; color: #0c6dfd; border-bottom: 3px solid #0c6dfd; width: 30%; margin: auto;">
       About Us</h1>
   </div>
   <!-- Header End -->
@@ -198,17 +225,15 @@
 
   <!-- Testimonial Start -->
 
-  <!-- Header Start -->
-  <div class="col-lg-12 text-center">
-    <h1 class="display-3 animated slideInDown"
-      style="text-transform: uppercase; font-weight: 600; color: #0c6dfd; margin-bottom: 20px;">
-      Testimonial</h1>
-  </div>
-  <!-- Header End -->
-
-  <section class="testimonial-section">
+  <section class="testimonial-section" style="background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 33%, rgba(0,212,255,1) 100%);">
+    <div class="col-lg-12 text-center">
+      <h1 class="display-3 animated slideInDown"
+        style="text-transform: uppercase; font-weight: 600; color: #f9f9f9; margin-bottom: 40px; border-bottom: 3px solid #f9f9f9; width: 30%; margin-left: auto; margin-right: auto;">
+        Testimonial</h1>
+    </div>
     <div class="container">
-      <h2>What Our Students Say</h2>
+      <h2 style="color: #f9f9f9;">What Our Students Say</h2>
       <div class="testimonial-container">
         <div class="testimonial-card">
           <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="testimonial author">
@@ -241,7 +266,7 @@
   <!-- Header Start -->
   <div class="col-lg-12 text-center">
     <h1 class="display-3 animated slideInDown"
-      style="text-transform: uppercase; font-weight: 600; color: #0c6dfd; margin-bottom: 40px;">
+      style="text-transform: uppercase; font-weight: 600; color: #0c6dfd; margin-bottom: 40px; border-bottom: 3px solid #0c6dfd; width: 10%; margin-left: auto; margin-right: auto;">
       FAQ</h1>
   </div>
   <!-- Header End -->
@@ -290,29 +315,30 @@
   <!-- End FAQ -->
 
   <!-- Contact Start -->
-  <!-- Header Start -->
-  <div class="col-lg-12 text-center">
-    <h1 class="display-3 animated slideInDown"
-      style="text-transform: uppercase; font-weight: 600; color: #0c6dfd; margin-bottom: 40px;">
-      Contact us</h1>
-  </div>
-  <!-- Header End -->
-  <div class="container-xxl py-5" style="background-color: #f9f9f9;">
+
+  <div class="container3"
+    style="background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 33%, rgba(0,212,255,1) 100%); padding: 30px 0 40px;">
+    <div class="col-lg-12 text-center">
+      <h1 class="display-3 animated slideInDown"
+        style="text-transform: uppercase; font-weight: 600; color: #f9f9f9; margin-bottom: 40px; border-bottom: 3px solid #f9f9f9; width: 30%; margin-left: auto; margin-right: auto;">
+        Contact us</h1>
+    </div>
     <div class="container .contact-container">
       <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-        <h1 class="mb-5" style="margin-bottom: 20px;">Contact For Any Query</h1>
+        <h1 class="mb-5" style="margin-bottom: 20px; color: #f9f9f9;">Contact For Any Query</h1>
       </div>
       <div class="row g-4 justify-content-md-center">
         <div class="col-lg-8 col-md-6  wow fadeInUp" data-wow-delay="0.1s">
-          <h5>Get In Touch</h5>
+          <h5 style="color: #f9f9f9;">Get In Touch</h5>
           <div class="d-flex align-items-center mb-3">
             <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
               style="width: 50px; height: 50px;">
               <i class="fa fa-map-marker-alt text-white"></i>
             </div>
             <div class="ms-3">
-              <h5 class="text-primary">Office</h5>
-              <p class="mb-0">Mathura, Uttar Pradesh, India</p>
+              <h5 class="text-primary" style="color: #f9f9f9;">Office</h5>
+              <p class="mb-0" style="color: #f9f9f9;">Mathura, Uttar Pradesh, India</p>
             </div>
           </div>
           <div class="d-flex align-items-center mb-3">
@@ -322,7 +348,7 @@
             </div>
             <div class="ms-3">
               <h5 class="text-primary">Mobile</h5>
-              <p class="mb-0">+012 345 67890</p>
+              <p class="mb-0" style="color: #f9f9f9;">+012 345 67890</p>
             </div>
           </div>
           <div class="d-flex align-items-center">
@@ -332,7 +358,7 @@
             </div>
             <div class="ms-3">
               <h5 class="text-primary">Email</h5>
-              <p class="mb-0">info@example.com</p>
+              <p class="mb-0" style="color: #f9f9f9;">info@example.com</p>
             </div>
           </div>
         </div>
@@ -376,10 +402,11 @@
   <!-- Contact End -->
 
   <!-- Login / Registration Form -->
+
   <!-- Header Start -->
   <div class="col-lg-12 text-center">
     <h1 class="display-3 animated slideInDown"
-      style="text-transform: uppercase; font-weight: 600; color: #0c6dfd; margin-bottom: 40px; margin-top: 40px;">
+      style="text-transform: uppercase; font-weight: 600; color: #0c6dfd; margin-bottom: 40px; margin-top: 40px; border-bottom: 3px solid #0c6dfd; width: 40%; margin-left: auto; margin-right: auto;">
       Register Now</h1>
   </div>
   <!-- Header End -->
@@ -404,7 +431,7 @@
       </div>
       <div class="forms">
         <div class="form-content">
-          <div class="login-form">
+          <div class="login-form2">
             <div class="title">Login</div>
             <form action="#">
               <div class="input-boxes">
@@ -418,13 +445,13 @@
                 </div>
                 <div class="text"><a href="#">Forgot password?</a></div>
                 <div class="button input-box">
-                  <input type="submit" value="Submit">
+                  <input type="submit" value="Login" onclick="login()">
                 </div>
                 <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
               </div>
             </form>
           </div>
-          <div class="signup-form">
+          <div class="signup-form2">
             <div class="title">Signup</div>
             <form action="#">
               <div class="input-boxes">
@@ -441,7 +468,7 @@
                   <input type="password" placeholder="Enter your password" required>
                 </div>
                 <div class="button input-box">
-                  <input type="submit" value="Submit">
+                  <input type="submit" value="Signup" onclick="register()">
                 </div>
                 <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
               </div>
@@ -455,8 +482,8 @@
 
   <!-- Login/Signup Form -->
 
-  <a href="http://localhost:3000/data"></a>
-  <div class="modal" id="myModal1">
+
+  <!-- <div class="modal" id="myModal1">
     <div class="modal-content1">
       <span class="close1">&times;</span>
       <h3 class="form-heading1">Register</h3>
@@ -471,12 +498,12 @@
         <input type="password" id="pass" name="password" required /><br />
         <input type="button" onclick="register()" value="Register" /><br />
       </form>
+      
     </div>
   </div>
   <br />
   <div class="modal" id="myModal2">
     <div class="modal-content2">
-      <span class="close2">&times;</span>
       <h3 class="form-heading1">Login</h3>
       <form id="login">
         <label for="email">Email:</label><br />
@@ -485,8 +512,10 @@
         <input type="password" id="pass" name="password" /><br />
         <input type="button" onclick="login()" value="Login" /><br />
       </form>
-    </div>
-  </div>
+      <button class="login-btn">Login</button> -->
+
+
+
 
   <!-- Footer Start -->
   <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -588,67 +617,109 @@
     });
   }
 
+  // Login Section
+
+  const loginBtn = document.querySelector('.login-btn');
+  const loginForm = document.querySelector('.login-form');
+  const cancelBtn = document.querySelector('.cancel-btn');
+
+  loginBtn.addEventListener('click', () => {
+    loginForm.style.display = 'block';
+  });
+
+  cancelBtn.addEventListener('click', () => {
+    loginForm.style.display = 'none';
+  });
+
+  const signupBtn = document.querySelector('.signup-btn');
+  const signupForm = document.querySelector('.signup-form');
+  const cancelBtn2 = document.querySelector('.cancel-btn2');
+
+  signupBtn.addEventListener('click', () => {
+    signupForm.style.display = 'block';
+  });
+
+  cancelBtn2.addEventListener('click', () => {
+    signupForm.style.display = 'none';
+  });
+
+  const loginBtn2 = document.querySelector('.login-btn2');
+  const loginForm2 = document.querySelector('.login-form');
+  const cancelBtn3 = document.querySelector('.cancel-btn');
+
+  loginBtn2.addEventListener('click', () => {
+    loginForm.style.display = 'block';
+  });
+
+  cancelBtn3.addEventListener('click', () => {
+    loginForm.style.display = 'none';
+  });
+
   // Modal
 
   // Get the modal
-  var modal2 = document.getElementById("myModal2");
-  var modal1 = document.getElementById("myModal1");
+  // var modal2 = document.getElementById("myModal2");
+  // var modal1 = document.getElementById("myModal1");
 
   // Get the button that opens the modal
-  var btn2 = document.getElementById("signin");
-  var btn1 = document.getElementById("signup");
-  var btn3 = document.getElementById("start-practice");
+  // var btn2 = document.getElementById("signin");
+  // var btn1 = document.getElementById("signup");
+  // var btn3 = document.getElementById("start-practice");
 
   // Get the <span> element that closes the modal
-  var span2 = document.getElementsByClassName("close2")[0];
-  var span1 = document.getElementsByClassName("close1")[0];
+  // var span2 = document.getElementsByClassName("close2")[0];
+  // var span1 = document.getElementsByClassName("close1")[0];
 
   // When the user clicks on the button, open the modal
-  function button2() {
-    btn2.onclick = function () {
-      modal2.style.display = "block";
-    };
-    // When the user clicks on <span> (x), close the modal
-    span2.onclick = function () {
-      modal2.style.display = "none";
-    };
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal2) {
-        modal2.style.display = "none";
-      }
-    };
-  }
-  function button1() {
-    btn1.onclick = function () {
-      modal1.style.display = "block";
-    };
-    // When the user clicks on <span> (x), close the modal
-    span1.onclick = function () {
-      modal1.style.display = "none";
-    };
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal1) {
-        modal1.style.display = "none";
-      }
-    };
-  }
-  function button3() {
-    btn3.onclick = function () {
-      modal2.style.display = "block";
-    };
-    // When the user clicks on <span> (x), close the modal
-    span2.onclick = function () {
-      modal2.style.display = "none";
-    };
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal2) {
-        modal2.style.display = "none";
-      }
-    };
-  }
+  // function button2() {
+  //   btn2.onclick = function () {
+  //     modal2.style.display = "block";
+  //   };
+  // When the user clicks on <span> (x), close the modal
+  // span2.onclick = function () {
+  //   modal2.style.display = "none";
+  // };
+  // When the user clicks anywhere outside of the modal, close it
+  //   window.onclick = function (event) {
+  //     if (event.target == modal2) {
+  //       modal2.style.display = "none";
+  //     }
+  //   };
+  // }
+  // function button1() {
+  //   btn1.onclick = function () {
+  //     modal1.style.display = "block";
+  //   };
+  // When the user clicks on <span> (x), close the modal
+  // span1.onclick = function () {
+  //   modal1.style.display = "none";
+  // };
+  // When the user clicks anywhere outside of the modal, close it
+  //   window.onclick = function (event) {
+  //     if (event.target == modal1) {
+  //       modal1.style.display = "none";
+  //     }
+  //   };
+  // }
+  // function button3() {
+  //   btn3.onclick = function () {
+  //     modal2.style.display = "block";
+  //   };
+  // When the user clicks on <span> (x), close the modal
+  // span2.onclick = function () {
+  //   modal2.style.display = "none";
+  // };
+  // When the user clicks anywhere outside of the modal, close it
+  //   window.onclick = function (event) {
+  //     if (event.target == modal2) {
+  //       modal2.style.display = "none";
+  //     }
+  //   };
+  // }
+
+
+
+  // FAQ Section
   const faqs = document.querySelectorAll('.faq');
 
   faqs.forEach(faq => {
