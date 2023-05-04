@@ -42,7 +42,7 @@
         <a href="mainindex.html" class="nav-item nav-link active">Home</a>
         <a href="about.html" class="nav-item nav-link">About</a>
         <a href="contact.html" class="nav-item nav-link">Contact</a>
-        <a href="#" class="nav-item nav-link" onclick="document.location.href = 'faq'">FAQ</a>
+        <a href="faq.html" class="nav-item nav-link">FAQ</a>
         <a href="#" class="nav-item nav-link" onclick="document.location.href = 'profile'">Profile</a>
         <!-- <div class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -72,7 +72,7 @@
       <input type="email" id="email" name="email" placeholder="Email" required>
       <label for="password">Password: </label>
       <input type="password" id="password" name="password" placeholder="Password" required>
-      <input type="button" onclick="login()" value="Login"/>
+      <input type="button" class="login-button" onclick="login(this)" value="Login"/>
       <input type="button" class="cancel-btn" value="Cancel"/>
     </form>
   </div>
@@ -86,7 +86,7 @@
       <input type="email" id="email" name="email" placeholder="Email" required>
       <label for="password">Password: </label>
       <input type="password" name="password" placeholder="Password" required>
-      <input type="button" onclick="register()" value="Signup"/>
+      <input type="button" class="signup-button" onclick="register(this)" value="Signup"/>
       <input type="button" class="cancel-btn2" value="Cancel"/>
     </form>
   </div>
@@ -431,6 +431,7 @@
       </div>
       <div class="forms">
         <div class="form-content">
+
           <div class="login-form2">
             <div class="title">Login</div>
             <form action="#">
@@ -445,7 +446,7 @@
                 </div>
                 <div class="text"><a href="#">Forgot password?</a></div>
                 <div class="button input-box">
-                  <input type="button" value="Login" onclick="login()">
+                  <input type="button" value="Login" onclick="login(this)">
                 </div>
                 <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
               </div>
@@ -468,7 +469,7 @@
                   <input type="password" name="password" placeholder="Enter your password" required>
                 </div>
                 <div class="button input-box">
-                  <input type="button" value="Signup" onclick="register()">
+                  <input type="button" value="Signup" onclick="register(this)">
                 </div>
                 <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
               </div>
@@ -587,7 +588,7 @@
 <script>
   //Login/Signup Form
 
-  function register() {
+  function register(e) {
     var j = $("#register").serialize();
     $.ajax({
       url: "/register",
@@ -602,7 +603,7 @@
       },
     });
   }
-  function login() {
+  function login(e) {
     var j = $("#login").serialize();
     $.ajax({
       url: "/login",

@@ -1,24 +1,3 @@
-// Modal For DropDown
-
-// Get the modal
-var modal3 = document.getElementById("myModal3");
-
-// Get the button that opens the modal
-var btn4 = document.getElementById("start-test");
-
-// When the user clicks on the button, open the modal
-function dropdown() {
-  btn4.onclick = function () {
-    modal3.style.display = "block";
-  };
-
-  window.onclick = function (event) {
-    if (event.target == modal3) {
-      modal3.style.display = "none";
-    }
-  };
-}
-
 var data = {};
 // Exam Script
 
@@ -102,6 +81,32 @@ function dataHtml(i2) {
 
 // Next Button
 function nxtque() {
+  var qid = document.querySelector(".question").getAttribute('id');
+  var sel="";
+  console.log(qid);
+  var opc = document.getElementsByClassName("form-check");
+  for (i of opc) {
+    i.style.backgroundColor = "#DAF5FF";
+  }
+  var op = document.getElementsByName("Options");
+  for (let i of op) {
+    if (i.checked == true) {
+      sel = i.getAttribute('value');
+      console.log(i.getAttribute('value'));
+    }
+  }
+  document.location.href='submitQuestion?qid='+qid+'&sel='+sel;
+  var n = document.getElementById("qid").innerHTML;
+  var n2 = parseInt(n) + 1;
+
+  // Changing badges classes
+  document.querySelector("#b-" + n2 + "").classList.remove("text-bg-warning");
+  document.querySelector("#b-" + n2 + "").classList.add("text-bg-success");
+  dataHtml(n2);
+}
+
+// Skip Button
+function skpque() {
   var qid = document.querySelector(".question").getAttribute('id');
   var sel="";
   console.log(qid);
