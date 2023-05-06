@@ -50,7 +50,8 @@ async function sendExamData(eid,rand,email){
   var db = await client.db("csprep_db");
   var exams = await db.collection("exams");
   try{
-    var res = await exams.insertOne({eid:eid,rstr:rand,email:email,starttime:"",endtime:"",answers:[]});
+    var date = new Date();
+    var res = await exams.insertOne({eid:eid,rstr:rand,email:email,starttime:date.getTime(),endtime:"",answers:[]});
     return res.insertedId.toString();
   }
   catch(err){
