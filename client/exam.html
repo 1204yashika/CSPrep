@@ -28,7 +28,7 @@
   <body onload="fatchdata()">
     <!-- Main Content -->
     <div class="page-container">
-      <div class="que-container grid-item">
+      <div class="que-container grid-item shadow-lg rounded">
         <div class="top-cont">
           <div class="queno">
             Que.<span id="qno"></span> of <span id="total"></span>
@@ -83,14 +83,14 @@
           <span id="qid" hidden></span>
         </div>
         <div class="next-btn">
-          <button type="button" id="nxt-btn" onclick="nxtque()">Next Question</button>
-          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+          <button type="button" id="nxt-btn" onclick="nxtque()">Submit Question</button>
+          <button type="button" id="skip-btn" onclick="skpque()">Skip Question</button>
         </div>
       </div>
-      <div class="conBadge grid-item">
+      <div class="conBadge grid-item shadow-lg rounded">
         <div class="boxes" id="con-Badge"></div>
         <div class="button">
-          <input type="button" name="Submit" value="Submit Your Test" class="sub-btn" />
+          <input type="button" name="Submit" value="Submit Your Exam" class="sub-btn" />
         </div>
       </div>
     </div>
