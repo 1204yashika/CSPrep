@@ -1,10 +1,122 @@
+//Login/Signup Form
+
+function register(e) {
+  var j = $("#register").serialize();
+  $.ajax({
+    url: "/register",
+    data: j,
+    method: "post",
+    success: function (data) {
+      alert("You are registered. Please login...");
+      document.location.href = "/";
+    },
+    error: function (x, y) {
+      alert(x.responseText);
+    },
+  });
+}
+function login(e) {
+  var j = $("#login").serialize();
+  $.ajax({
+    url: "/login",
+    data: j,
+    method: "post",
+    success: function (data) {
+      document.location.href = "Home";
+    },
+    error: function (x, y) {
+      alert(x.responseText);
+    },
+  });
+}
+
+// Login Section
+
+const loginBtn = document.querySelector('.login-btn');
+const loginForm = document.querySelector('.login-form');
+const cancelBtn = document.querySelector('.cancel-btn');
+
+loginBtn.addEventListener('click', () => {
+  loginForm.style.display = 'block';
+});
+
+cancelBtn.addEventListener('click', () => {
+  loginForm.style.display = 'none';
+});
+
+const signupBtn = document.querySelector('.signup-btn');
+const signupForm = document.querySelector('.signup-form');
+const cancelBtn2 = document.querySelector('.cancel-btn2');
+
+signupBtn.addEventListener('click', () => {
+  signupForm.style.display = 'block';
+});
+
+cancelBtn2.addEventListener('click', () => {
+  signupForm.style.display = 'none';
+});
+
+const loginBtn2 = document.querySelector('.login-btn2');
+const loginForm2 = document.querySelector('.login-form');
+const cancelBtn3 = document.querySelector('.cancel-btn');
+
+loginBtn2.addEventListener('click', () => {
+  loginForm.style.display = 'block';
+});
+
+cancelBtn3.addEventListener('click', () => {
+  loginForm.style.display = 'none';
+});
+
+
+// FAQ Section
+const faqs = document.querySelectorAll('.faq');
+
+faqs.forEach(faq => {
+  const title = faq.querySelector('.faq-title');
+  const content = faq.querySelector('.faq-content');
+
+  title.addEventListener('click', () => {
+    faq.classList.toggle('active');
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+  });
+});
+
+const form = document.querySelector('#new-question-form');
+
+form.addEventListener('submit', event => {
+  event.preventDefault();
+
+  const title = form.querySelector('input').value;
+  const content = form.querySelector('textarea').value;
+
+  const faq = document.createElement('div');
+  faq.className = 'faq';
+
+  const faqTitle = document.createElement('h2');
+  faqTitle.className = 'faq-title';
+  faqTitle.innerText = title;
+
+  const faqContent = document.createElement('p');
+  faqContent.className = 'faq-content';
+  faqContent.innerText = content;
+
+  faq.appendChild(faqTitle);
+  faq.appendChild(faqContent);
+
+  form.parentNode.insertBefore(faq, form);
+
+  form.querySelector('input').value = '';
+  form.querySelector('textarea').value = '';
+});
+
 var data = {};
 // Exam Script
 
 // Fetch JSON data
 function fatchdata() {
-  // fetch("data")
-  fetch("GATE15P1.json")
+  fetch("data")
+  // fetch("GATE15P1.json")
     .then((response) => response.json())
     .then((d) => {
       data = d;
@@ -161,42 +273,45 @@ function checkOption(e) {
 
 // FAQ Section
 
-const faqs = document.querySelectorAll('.faq');
+// const faqs = document.querySelectorAll('.faq');
 
-faqs.forEach(faq => {
-  const title = faq.querySelector('.faq-title');
-  const content = faq.querySelector('.faq-content');
+// faqs.forEach(faq => {
+//   const title = faq.querySelector('.faq-title');
+//   const content = faq.querySelector('.faq-content');
 
-  title.addEventListener('click', () => {
-    faq.classList.toggle('active');
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-  });
-});
+//   title.addEventListener('click', () => {
+//     faq.classList.toggle('active');
+//     content.style.display = content.style.display === 'block' ? 'none' : 'block';
+//   });
+// });
 
-const form = document.querySelector('#new-question-form');
 
-form.addEventListener('submit', event => {
-  event.preventDefault();
 
-  const title = form.querySelector('input').value;
-  const content = form.querySelector('textarea').value;
 
-  const faq = document.createElement('div');
-  faq.className = 'faq';
+// const form = document.querySelector('#new-question-form');
 
-  const faqTitle = document.createElement('h2');
-  faqTitle.className = 'faq-title';
-  faqTitle.innerText = title;
+// form.addEventListener('submit', event => {
+//   event.preventDefault();
 
-  const faqContent = document.createElement('p');
-  faqContent.className = 'faq-content';
-  faqContent.innerText = content;
+//   const title = form.querySelector('input').value;
+//   const content = form.querySelector('textarea').value;
 
-  faq.appendChild(faqTitle);
-  faq.appendChild(faqContent);
+//   const faq = document.createElement('div');
+//   faq.className = 'faq';
 
-  form.parentNode.insertBefore(faq, form);
+//   const faqTitle = document.createElement('h2');
+//   faqTitle.className = 'faq-title';
+//   faqTitle.innerText = title;
 
-  form.querySelector('input').value = '';
-  form.querySelector('textarea').value = '';
-});
+//   const faqContent = document.createElement('p');
+//   faqContent.className = 'faq-content';
+//   faqContent.innerText = content;
+
+//   faq.appendChild(faqTitle);
+//   faq.appendChild(faqContent);
+
+//   form.parentNode.insertBefore(faq, form);
+
+//   form.querySelector('input').value = '';
+//   form.querySelector('textarea').value = '';
+// });

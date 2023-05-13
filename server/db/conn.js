@@ -28,7 +28,7 @@ async function checkUser(myobj){
         return {"status":"failed","message":"Invalid username and password combination"}
       }
       else {
-        return {"status":"success","name":x["name"]}
+        return {"status":"success","username":x["username"]}
       }
     }
     catch(err){
