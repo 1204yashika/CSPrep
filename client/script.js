@@ -30,6 +30,7 @@ function login(e) {
   });
 }
 
+
 //QueCategory Section 
 
 // Get the modal element
@@ -134,46 +135,6 @@ questionDropdowns.forEach(function (dropdown) {
     updateResult();
   });
 });
-
-
-// Login Section
-
-const loginBtn = document.querySelector('.login-btn');
-const loginForm = document.querySelector('.login-form');
-const cancelBtn = document.querySelector('.cancel-btn');
-
-loginBtn.addEventListener('click', () => {
-  loginForm.style.display = 'block';
-});
-
-cancelBtn.addEventListener('click', () => {
-  loginForm.style.display = 'none';
-});
-
-const signupBtn = document.querySelector('.signup-btn');
-const signupForm = document.querySelector('.signup-form');
-const cancelBtn2 = document.querySelector('.cancel-btn2');
-
-signupBtn.addEventListener('click', () => {
-  signupForm.style.display = 'block';
-});
-
-cancelBtn2.addEventListener('click', () => {
-  signupForm.style.display = 'none';
-});
-
-const loginBtn2 = document.querySelector('.login-btn2');
-const loginForm2 = document.querySelector('.login-form');
-const cancelBtn3 = document.querySelector('.cancel-btn');
-
-loginBtn2.addEventListener('click', () => {
-  loginForm.style.display = 'block';
-});
-
-cancelBtn3.addEventListener('click', () => {
-  loginForm.style.display = 'none';
-});
-
 
 // FAQ Section
 const faqs = document.querySelectorAll('.faq');
@@ -390,48 +351,3 @@ function SubmitPaper(){
       },
     });
 }
-// 
-// FAQ Section
-
-// const faqs = document.querySelectorAll('.faq');
-
-// faqs.forEach(faq => {
-//   const title = faq.querySelector('.faq-title');
-//   const content = faq.querySelector('.faq-content');
-
-//   title.addEventListener('click', () => {
-//     faq.classList.toggle('active');
-//     content.style.display = content.style.display === 'block' ? 'none' : 'block';
-//   });
-// });
-
-
-
-
-// const form = document.querySelector('#new-question-form');
-
-// form.addEventListener('submit', event => {
-//   event.preventDefault();
-
-//   const title = form.querySelector('input').value;
-//   const content = form.querySelector('textarea').value;
-
-//   const faq = document.createElement('div');
-//   faq.className = 'faq';
-
-//   const faqTitle = document.createElement('h2');
-//   faqTitle.className = 'faq-title';
-//   faqTitle.innerText = title;
-
-//   const faqContent = document.createElement('p');
-//   faqContent.className = 'faq-content';
-//   faqContent.innerText = content;
-
-//   faq.appendChild(faqTitle);
-//   faq.appendChild(faqContent);
-
-//   form.parentNode.insertBefore(faq, form);
-
-//   form.querySelector('input').value = '';
-//   form.querySelector('textarea').value = '';
-// });
