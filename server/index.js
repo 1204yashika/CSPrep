@@ -25,7 +25,7 @@ app.get('/', (req, res)=>{
         res.redirect("/Home");
     }
     else {
-        // req.session.username = "1204yashikaagrawal@gmail.com";
+        // req.session.username = "programmerscommunityofficial@gmail.com";
         // req.session.examid = "64327de7489e7a5e888bb5ce";
         res.sendFile("/client/mainindex.html", {'root': './'});
     }

@@ -82,9 +82,14 @@ async function saveAnswers(id,ans){
 }
 
 async function sendResponse(id){
+  var date = new Date();
   await client.connect();
   var db = await client.db("csprep_db");
   var exams = await db.collection("exams");
+  exams.updateOne(
+    { "_id": new ObjectId(id) },
+    { "$set": { "endtime": date.getTime() } }
+  )
   var q = await exams.find({"_id": new ObjectId(id)});
   var qs = []
   await q.forEach(b=>qs.push(b));
