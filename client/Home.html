@@ -39,11 +39,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <div class="navbar-nav ms-auto p-4 p-lg-0">
-        <a href="#" class="nav-item nav-link"onclick="document.location.href = 'Home'">Home</a>
+        <a href="#" class="nav-item nav-link" onclick="document.location.href = 'Home'">Home</a>
         <a href="about.html" class="nav-item nav-link">About</a>
         <a href="contact.html" class="nav-item nav-link">Contact</a>
         <a href="faq.html" class="nav-item nav-link">FAQ</a>
-        <a href="#" class="nav-item nav-link"onclick="document.location.href = 'profile'">Profile</a>
+        <a href="#" class="nav-item nav-link" onclick="document.location.href = 'profile'">Profile</a>
       </div>
       <div class="button">
         <button class="btn btn-primary" onclick="document.location.href='logout'" class="logout-button">Logout</button>
@@ -52,44 +52,155 @@
   </nav>
 
   <div class="category shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-    <h3>Welcome to CSPrep, your ultimate destination for GATE exam preparation. To get started, please select your desired exam category from the options below. </h3>
+    <h3>Welcome to CSPrep, your ultimate destination for GATE exam preparation. To get started, please select your
+      desired exam category from the options below. </h3>
     <h4>Start your GATE exam preparation journey with CSPrep today!</h4>
     <div class="options">
-        <button type="button" class="btn btn-primary dropdown-toggle opt1" data-bs-toggle="dropdown" aria-expanded="false">
-          Previous Year Question Papers
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#" onclick="document.location.href='takeexam?eid=GATE15P1&randomstring='">PYQP 2015 P1</a></li>
-          <li><a class="dropdown-item" href="#" onclick="document.location.href='takeexam?eid=GATE15P2&randomstring='">PYQP 2015 P2</a></li>
-          <li><a class="dropdown-item" href="#" onclick="document.location.href='takeexam?eid=GATE14P1&randomstring='">PYQP 2014 P1</a></li>
-        </ul>
-        <button type="button" class="btn btn-primary opt1" onclick="document.location.href='takeexam?eid=GATE15P1&randomstring='">
-          Customize Questions Test
-        </button>
-      </div>
-    <!-- <button onclick="document.location.href='takeexam?eid=GATE15P1&randomstring='">GATE 2015 P1</button> -->
-    <!-- <div class="home-content">
-      <button type="button" class="home-btn" id="start-test" onclick="dropdown()">
-        Start Your Test
+      <button type="button" class="btn btn-primary dropdown-toggle opt1" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Previous Year Question Papers
       </button>
-    </div> -->
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#"
+            onclick="document.location.href='takeexam?eid=GATE15P1&randomstring='">PYQP 2015 P1</a></li>
+        <li><a class="dropdown-item" href="#"
+            onclick="document.location.href='takeexam?eid=GATE15P2&randomstring='">PYQP 2015 P2</a></li>
+        <li><a class="dropdown-item" href="#"
+            onclick="document.location.href='takeexam?eid=GATE14P1&randomstring='">PYQP 2014 P1</a></li>
+      </ul>
+      <button type="button" class="btn btn-primary opt1 queCtgry" id="openModalBtn">
+        Customize Questions Test
+      </button>
 
-    <!-- Dropdown -->
-    <!-- <div class="modal3" id="myModal3">
-      <div class="modal-content3">
-        <div class="dropdown" id="dropdown-item">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Choose Your Category
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" onclick="document.location.href='takeexam?eid=GATE15P1&randomstring='"
-                id="button-ga">Previous Year Questions</a></li>
-            <li><a class="dropdown-item" href="exam.html" id="button-cs">Online Test</a></li>
-          </ul>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 class="Selection-heading">Select No. of Questions</h2>
+          <div id="result">No. of Questions Selected: 0</div>
+          <form id="questionsForm">
+            <table style="width: 100%;">
+              <tr style="text-transform: uppercase; font-size: 20px;">
+                <th style="width: 60%;">Subject</th>
+                <th>No. of Questions</th>
+              </tr>
+              <tr>
+                <td class="subject">
+                  <label for="compiler">Compiler Design</label>
+                </td>
+                <td>
+                  <select name="compiler" class="question-dropdown">
+                    <option value="0">0</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="subject">
+                  <label for="theory">Theory of Computation</label>
+                </td>
+                <td>
+                  <select name="theory" class="question-dropdown">
+                    <option value="0">0</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="subject">
+                  <label for="dbms">DBMS</label>
+                </td>
+                <td>
+                  <select name="dbms" class="question-dropdown">
+                    <option value="0">0</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="subject">
+                  <label for="networks">Computer Networks</label>
+                </td>
+                <td>
+                  <select name="networks" class="question-dropdown">
+                    <option value="0">0</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+            <p id="totalMessage"></p>
+            <p id="maxLimitMessage"></p>
+            <button type="submit" id="startTestBtn"
+              onclick="document.location.href='takeexam?eid=CUSTOM&randomstring='">Start Test</button>
+          </form>
         </div>
       </div>
-    </div>  -->
+
+    </div>
   </div>
+
+  <!-- <div class="queSelect">
+        <div id="Que-selection">
+          <div class="selection">
+            <h6 id="CD">Compiler Design</h6>
+            <select>
+              <option value="0">0</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+            </select>
+          </div>
+          <div class="selection">
+            <h6 id="TOC">Theory of Computation</h6>
+            <select>
+              <option value="0">0</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+            </select>
+          </div>
+          <div class="selection">
+            <h6 id="DBMS">DBMS</h6>
+            <select>
+              <option value="0">0</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+            </select>
+          </div>
+          <div class="selection">
+            <h6 id="CN">Computer Networks</h6>
+            <select>
+              <option value="0">0</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+            </select>
+          </div>
+        </div>
+        <button class="cncl-btn">Cancel</button>
+        <button class="ctgry-btn" onclick="document.location.href='takeexam?eid=CUSTOM&randomstring='">Start
+          Exam</button>
+
+      </div>
+    </div> -->
+
 
 
   <!-- Footer Start -->
