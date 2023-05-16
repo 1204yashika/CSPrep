@@ -81,4 +81,14 @@ async function saveAnswers(id,ans){
   return "success";
 }
 
-module.exports = {createdefaultexam, addUser, checkUser, sendExamData, searchexamid, saveAnswers};
+async function sendResponse(id){
+  await client.connect();
+  var db = await client.db("csprep_db");
+  var exams = await db.collection("exams");
+  var q = await exams.find({"_id": new ObjectId(id)});
+  var qs = []
+  await q.forEach(b=>qs.push(b));
+  return qs;
+}
+
+module.exports = {createdefaultexam, addUser, checkUser, sendExamData, searchexamid, saveAnswers, sendResponse};

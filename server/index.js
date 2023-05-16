@@ -65,6 +65,14 @@ app.get('/Home', (req, res)=>{
         res.redirect("/");
     }
 });
+app.get('/Result',(req,res)=>{
+    if(req.session.username){
+        res.sendFile("/client/Result.html", {'root': './'});
+    }
+    else {
+        res.redirect("/");
+    }
+})
 
 app.post("/register",(req,res)=>{
     let data = req.body;
@@ -160,5 +168,19 @@ app.get("/submitQuestion",(req,res)=>{
     else {
         res.redirect("/");
     }
-})
+});
+
+app.post("/submitPaper",(req,res)=>{
+    if (req.session.username){
+        var resp = req.body;
+        conn.sendResponse(req.session.examid).then(function(r){
+            res.send(r);
+        });     
+    }
+    else {
+        res.redirect("/");
+    }
+});
+
+
 

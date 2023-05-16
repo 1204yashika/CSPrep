@@ -207,7 +207,7 @@ function nxtque() {
       console.log(i.getAttribute('value'));
     }
   }
-  // document.location.href='submitQuestion?qid='+qid+'&sel='+sel;
+  document.location.href='submitQuestion?qid='+qid+'&sel='+sel;
   var n = document.getElementById("qid").innerHTML;
   var n2 = parseInt(n) + 1;
 
@@ -271,6 +271,20 @@ function checkOption(e) {
     
 })(jQuery);
 
+var rdata = {}
+function SubmitPaper(){
+  $.ajax({
+      url: "/submitPaper",
+      method: "post",
+      success: function (d) {
+        console.log(d[0])
+      },
+      error: function (x, y) {
+        alert(x.responseText);
+      },
+    });
+}
+// 
 // FAQ Section
 
 // const faqs = document.querySelectorAll('.faq');
