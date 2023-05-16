@@ -182,11 +182,13 @@ var data = {};
 
 // Fetch JSON data
 function fatchdata() {
-  fetch("data")
-  // fetch("GATE15P1.json")
-    .then((response) => response.json())
-    .then((d) => {
+  $.ajax({
+    url: "/data",
+    method: "get",
+    async: false,
+    success: function (d) {
       data = d;
+      console.log(d[0]);
       dataHtml(0);
       document.querySelector("#total").innerHTML = data.length;
       // var l = data.length;
@@ -217,13 +219,11 @@ function fatchdata() {
       </div>`;
         document.querySelector("#con-Badge").innerHTML += s;
       }
-    })
-
-    // JSON Fetching Error
-
-    .catch((error) => {
-      console.log("Error fetching data:", error);
-    });
+    },
+    error: function (x, y) {
+      alert(x.responseText);
+    },
+  });
 }
 
 // access the properties of the objects
@@ -274,7 +274,10 @@ function nxtque() {
       console.log(i.getAttribute('value'));
     }
   }
-  document.location.href='submitQuestion?qid='+qid+'&sel='+sel;
+  $.ajax({
+    url:'submitQuestion?qid='+qid+'&sel='+sel
+  })
+  // document.location.href='submitQuestion?qid='+qid+'&sel='+sel;
   var n = document.getElementById("qid").innerHTML;
   var n2 = parseInt(n) + 1;
 
@@ -343,11 +346,68 @@ function SubmitPaper(){
   $.ajax({
       url: "/submitPaper",
       method: "post",
+      async: false,
       success: function (d) {
+        rdata = d[0];
         console.log(d[0])
       },
       error: function (x, y) {
         alert(x.responseText);
       },
     });
+    ans = rdata["answers"];
+    att = ans.length;
+    marks = 0;
+    corr = 0;
+    incorr = 0;
+    natt = 0;
+    time = parseInt(rdata["endtime"])-parseInt(rdata["starttime"]);
+    for (i of ans){
+      if(i['sel']==''){
+        att--;
+      }
+      else{
+        qid = i['qid'];
+        for(q of data){
+          if(q["Qid"]==qid){
+            if(parseInt(q["Correct"])==parseInt(i["sel"])){
+              corr++;
+              marks += parseInt(q["Marks"]);
+            }
+            else{
+              incorr++;
+            }
+          }
+        }
+      }
+    }
+    natt = 65 - att;
+    console.log(att +" "+natt+ " "+ marks+ " "+ corr + " "+incorr);
+    $.ajax({
+      url: "/setResultData",
+      method: "post",
+      data: {att:att,natt:natt,marks:marks,corr:corr,incorr:incorr,time:time},
+      async: false,
+      success: function(){
+        document.location.href = "Result";
+      },
+      error: function (x, y) {
+        alert(x.responseText);
+      },
+    });
+}
+
+function getData(){
+  $.ajax({
+    url: "/getResultData",
+    method: "get",
+    async: false,
+    success: function(d){
+      rdata = d;
+      console.log(rdata);
+    },
+    error: function (x, y) {
+      alert(x.responseText);
+    },
+  });
 }

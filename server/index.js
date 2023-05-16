@@ -25,7 +25,7 @@ app.get('/', (req, res)=>{
         res.redirect("/Home");
     }
     else {
-        // req.session.username = "programmerscommunityofficial@gmail.com";
+        req.session.username = "programmerscommunityofficial@gmail.com";
         // req.session.examid = "64327de7489e7a5e888bb5ce";
         res.sendFile("/client/mainindex.html", {'root': './'});
     }
@@ -65,9 +65,30 @@ app.get('/Home', (req, res)=>{
         res.redirect("/");
     }
 });
+rdata = {}
+app.post('/setResultData',(req,res)=>{
+    if(req.session.username){
+        rdata = req.body;
+        console.log(rdata);
+        res.send("");
+    }
+    else {
+        res.redirect("/");
+    }
+    
+})
 app.get('/Result',(req,res)=>{
     if(req.session.username){
         res.sendFile("/client/Result.html", {'root': './'});
+    }
+    else {
+        res.redirect("/");
+    }
+})
+
+app.get('/getResultData',(req,res)=>{
+    if(req.session.username){
+        res.send(rdata);
     }
     else {
         res.redirect("/");
@@ -164,6 +185,7 @@ app.get("/submitQuestion",(req,res)=>{
     if (req.session.username){
         var resp = req.query;
         conn.saveAnswers(req.session.examid,resp).then(r=>r);
+        res.send("");
     }
     else {
         res.redirect("/");

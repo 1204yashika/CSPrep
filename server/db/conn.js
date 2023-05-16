@@ -74,7 +74,7 @@ async function saveAnswers(id,ans){
   await client.connect();
   var db = await client.db("csprep_db");
   var exams = await db.collection("exams");
-  exams.updateOne(
+  await exams.updateOne(
     { "_id": new ObjectId(id) },
     { "$push": { "answers": ans } }
   )
@@ -86,7 +86,7 @@ async function sendResponse(id){
   await client.connect();
   var db = await client.db("csprep_db");
   var exams = await db.collection("exams");
-  exams.updateOne(
+  await exams.updateOne(
     { "_id": new ObjectId(id) },
     { "$set": { "endtime": date.getTime() } }
   )
