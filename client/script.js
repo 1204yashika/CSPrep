@@ -30,6 +30,112 @@ function login(e) {
   });
 }
 
+//QueCategory Section 
+
+// Get the modal element
+const modal = document.getElementById('modal');
+
+// Get the button that opens the modal
+const openModalBtn = document.getElementById('openModalBtn');
+
+// Get the close button
+const closeBtn = document.getElementsByClassName('close')[0];
+
+// Get the result div
+const resultDiv = document.getElementById('result');
+let selectedQuestions = 0;
+
+// When the user clicks the button, open the modal
+openModalBtn.onclick = function () {
+  modal.style.display = 'block';
+};
+
+// When the user clicks on close button, close the modal
+closeBtn.onclick = function () {
+  modal.style.display = 'none';
+  resetForm();
+};
+
+// When the user clicks outside the modal, close it
+window.onclick = function (event) {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+    resetForm();
+  }
+};
+
+// Handle form submission
+const questionsForm = document.getElementById('questionsForm');
+questionsForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  // Get the values of selected options for each subject
+  const compilerQuestions = parseInt(
+    document.querySelector('select[name="compiler"]').value
+  );
+  const theoryQuestions = parseInt(
+    document.querySelector('select[name="theory"]').value
+  );
+  const dbmsQuestions = parseInt(
+    document.querySelector('select[name="dbms"]').value
+  );
+  const networksQuestions = parseInt(
+    document.querySelector('select[name="networks"]').value
+  );
+
+  // Calculate the total number of questions
+  const totalQuestions = compilerQuestions + theoryQuestions + dbmsQuestions + networksQuestions;
+});
+
+// Reset the form and result
+function resetForm() {
+  questionsForm.reset();
+  selectedQuestions = 0;
+  updateResult();
+}
+
+// Update the result count display
+function updateResult() {
+  resultDiv.innerText = `No. of Questions Selected: ${selectedQuestions}`;
+
+  // Show warning message if the maximum limit is reached
+  const maxLimitMessage = document.getElementById('maxLimitMessage');
+  if (selectedQuestions >= 65) {
+    maxLimitMessage.innerText = 'Perfect!';
+    maxLimitMessage.style.display = 'block';
+  } else {
+    maxLimitMessage.innerText = '';
+    maxLimitMessage.style.display = 'none';
+  }
+}
+
+// Update the selected questions count and display the result in real-time
+const questionDropdowns = document.querySelectorAll('.question-dropdown');
+questionDropdowns.forEach(function (dropdown) {
+  dropdown.addEventListener('change', function () {
+    const selectedOptionValue = parseInt(this.value);
+    const previousSelectedQuestions = selectedQuestions;
+    selectedQuestions += selectedOptionValue;
+
+    // Display a warning message if the total exceeds the maximum limit
+    const totalMessage = document.getElementById('totalMessage');
+    if (selectedQuestions > 65) {
+      totalMessage.innerText = 'Please select only 65 questions.';
+      totalMessage.style.display = 'block';
+      selectedQuestions = previousSelectedQuestions; // Revert the selection if the limit is exceeded
+    } else if (selectedQuestions < 65) {
+      totalMessage.innerText = 'Please select atleast 65 questions.';
+      totalMessage.style.display = 'block';
+    } else {
+      totalMessage.innerText = '';
+      totalMessage.style.display = 'none';
+    }
+
+    updateResult();
+  });
+});
+
+
 // Login Section
 
 const loginBtn = document.querySelector('.login-btn');
@@ -270,6 +376,7 @@ function checkOption(e) {
   
     
 })(jQuery);
+
 
 // FAQ Section
 
