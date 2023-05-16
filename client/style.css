@@ -1514,7 +1514,7 @@ table {
   border-radius: 10px;
 }
 
-label {
+.subject label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;

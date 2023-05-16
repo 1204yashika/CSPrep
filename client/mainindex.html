@@ -31,7 +31,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
     <a href="mainindex.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-      <h2 class="m-0 text-primary" style="font-family: 'Bruno Ace', cursive; font-weight: bold;">
+      <h2 data-aos="fade-up" class="m-0 text-primary" style="font-family: 'Bruno Ace', cursive; font-weight: bold;">
         <i class="fa-solid fa-laptop-code me-3"></i>CSPrep
       </h2>
     </a>
@@ -45,14 +45,6 @@
         <a href="contact.html" class="nav-item nav-link">Contact</a>
         <a href="faq.html" class="nav-item nav-link">FAQ</a>
         <a href="#" class="nav-item nav-link" onclick="document.location.href = 'profile'">Profile</a>
-        <!-- <div class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                  <div class="dropdown-menu fade-down m-0">
-                      <a href="team.html" class="dropdown-item">Our Team</a>
-                      <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                      <a href="404.html" class="dropdown-item">404 Page</a>
-                  </div>
-              </div> -->
       </div>
       <div class="button">
         <button type="button" class="btn btn-outline-dark login-btn" id="signin">
@@ -527,6 +519,46 @@
   <!-- Footer End -->
 </body>
 
+<script>
+  // Login Section
+
+const loginBtn = document.querySelector('.login-btn');
+const loginForm = document.querySelector('.login-form');
+const cancelBtn = document.querySelector('.cancel-btn');
+
+loginBtn.addEventListener('click', () => {
+  loginForm.style.display = 'block';
+});
+
+cancelBtn.addEventListener('click', () => {
+  loginForm.style.display = 'none';
+});
+
+const signupBtn = document.querySelector('.signup-btn');
+const signupForm = document.querySelector('.signup-form');
+const cancelBtn2 = document.querySelector('.cancel-btn2');
+
+signupBtn.addEventListener('click', () => {
+  signupForm.style.display = 'block';
+});
+
+cancelBtn2.addEventListener('click', () => {
+  signupForm.style.display = 'none';
+});
+
+const loginBtn2 = document.querySelector('.login-btn2');
+const loginForm2 = document.querySelector('.login-form');
+const cancelBtn3 = document.querySelector('.cancel-btn');
+
+loginBtn2.addEventListener('click', () => {
+  loginForm.style.display = 'block';
+});
+
+cancelBtn3.addEventListener('click', () => {
+  loginForm.style.display = 'none';
+});
+
+</script>
 <script src="script.js"></script>
 
 </html> 
