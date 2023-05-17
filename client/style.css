@@ -1798,3 +1798,97 @@ table {
   font-size: 25px;
   margin: 60px;
 }
+
+/* Result Page */
+
+.resultContainer {
+  display: block;
+  position: relative;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 50px auto 20px;
+  width: 90%;
+  height: 100vh;
+}
+.result {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.resultContent {
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 20px;
+  font-weight: 500;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resultContent div {
+  margin-bottom: 10px;
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.resultContent span {
+  font-weight: bold;
+  color: var(--light);
+  background-color: green;
+  width: 40%;
+  padding: 5px 15px 5px 15px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+
+.chart {
+  display: flex;
+  flex-direction: row;
+}
+
+#myChartContainer {
+  width: 400px;
+  margin: 50px auto;
+}
+
+.chartHeading {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 30px auto;
+  text-align: center;
+  font-size: 15px;
+}
+
+#myChartContainer2 {
+  width: 400px;
+  margin: 50px auto;
+}
+
+.chartHeading2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 30px auto;
+  font-size: 15px;
+}
+
+#myChartContainer3 {
+  width: 400px;
+  margin: 50px auto;
+}
+
+.chartHeading3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 30px auto;
+  font-size: 15px;
+}
+@media (max-width: 768px) {
+  .resultContent {
+    max-width: 90%;
+  }
+}
