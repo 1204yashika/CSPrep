@@ -25,7 +25,7 @@ app.get('/', (req, res)=>{
         res.redirect("/Home");
     }
     else {
-        req.session.username = "programmerscommunityofficial@gmail.com";
+        // req.session.username = "programmerscommunityofficial@gmail.com";
         // req.session.examid = "64327de7489e7a5e888bb5ce";
         res.sendFile("/client/mainindex.html", {'root': './'});
     }
@@ -147,12 +147,16 @@ app.get("/takeexam",(req,res)=>{
     if (req.session.username) {
         var resp = req.query;
         var eid = resp["eid"];
-        var rand = "";
+        var rand = {};
         if(eid=="CUSTOM"){
             rand = resp["randomstring"];
             if(rand==null){
                 res.redirect("/");
             }
+            conn.sendExamData(eid,rand,req.session.username).then(function(r2){
+                req.session.examid = r2;
+                res.sendFile("/client/exam.html",{'root':'./'});
+            });
         }
         conn.sendExamData(eid,rand,req.session.username).then(function(r2){
             req.session.examid = r2;
@@ -170,7 +174,7 @@ app.get('/data',(req,res)=>{
         var eid;
         var rstr;
         conn.searchexamid(req.session.examid).then(function(results ){
-            conn.createdefaultexam(results[0]["eid"]).then(function(examdata){
+            conn.createdefaultexam(results[0]["eid"],results[0]["rstr"]).then(function(examdata){
                 return res.send(examdata);
             });
         });

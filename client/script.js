@@ -72,16 +72,16 @@ questionsForm.addEventListener('submit', function (event) {
 
   // Get the values of selected options for each subject
   const compilerQuestions = parseInt(
-    document.querySelector('select[name="compiler"]').value
+    document.querySelector('select[name="CD"]').value
   );
   const theoryQuestions = parseInt(
-    document.querySelector('select[name="theory"]').value
+    document.querySelector('select[name="TOC"]').value
   );
   const dbmsQuestions = parseInt(
-    document.querySelector('select[name="dbms"]').value
+    document.querySelector('select[name="DBMS"]').value
   );
   const networksQuestions = parseInt(
-    document.querySelector('select[name="networks"]').value
+    document.querySelector('select[name="CN"]').value
   );
 
   // Calculate the total number of questions
@@ -136,48 +136,7 @@ questionDropdowns.forEach(function (dropdown) {
   });
 });
 
-// FAQ Section
-const faqs = document.querySelectorAll('.faq');
 
-faqs.forEach(faq => {
-  const title = faq.querySelector('.faq-title');
-  const content = faq.querySelector('.faq-content');
-
-  title.addEventListener('click', () => {
-    faq.classList.toggle('active');
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-  });
-});
-
-const form = document.querySelector('#new-question-form');
-
-form.addEventListener('submit', event => {
-  event.preventDefault();
-
-  const title = form.querySelector('input').value;
-  const content = form.querySelector('textarea').value;
-
-  const faq = document.createElement('div');
-  faq.className = 'faq';
-
-  const faqTitle = document.createElement('h2');
-  faqTitle.className = 'faq-title';
-  faqTitle.innerText = title;
-
-  const faqContent = document.createElement('p');
-  faqContent.className = 'faq-content';
-  faqContent.innerText = content;
-
-  faq.appendChild(faqTitle);
-  faq.appendChild(faqContent);
-
-  form.parentNode.insertBefore(faq, form);
-
-  form.querySelector('input').value = '';
-  form.querySelector('textarea').value = '';
-});
-
-var data = {};
 // Exam Script
 
 // Fetch JSON data
@@ -493,4 +452,26 @@ function getData() {
       alert(x.responseText);
     },
   });
+}
+
+function customTest(){
+  // var cdata = $("#questionsForm").serializeToJSON();
+  var cdata = $('#questionsForm').serializeArray();
+  var Object = {};
+  $.each(cdata,
+      function(i, v) {
+          Object[v.name] = v.value;
+      });
+  console.log(Object);
+  document.location.href='takeexam?eid=CUSTOM&randomstring='+JSON.stringify(cdata);
+}
+
+function contactSubmit(){
+  var cdata = $('#contactForm').serializeArray();
+  var Object = {};
+  $.each(cdata,
+      function(i, v) {
+          Object[v.name] = v.value;
+      });
+  console.log(Object);
 }

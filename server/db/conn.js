@@ -35,14 +35,26 @@ async function checkUser(myobj){
       return err.message;
     }
 }
-async function createdefaultexam(id) {
+async function createdefaultexam(id,rstr) {
   await client.connect();
   var db = await client.db("csprep_db");
   var qdb = await db.collection("questions");
-  var q = await qdb.find({Qid: new RegExp(id, 'i')});
-  var qs = []
-  await q.forEach(b=>qs.push(b));
-  return qs;
+  if(id!="CUSTOM"){
+    var q = await qdb.find({Qid: new RegExp(id, 'i')});
+    var qs = []
+    await q.forEach(b=>qs.push(b));
+    return qs;
+  }
+  else{
+    var r = rstr;
+    var qs = [];
+    for(i of r){
+      var q = await qdb.find({Topic: i["name"]}).limit(parseInt(i["value"]));
+      await q.forEach(b=>qs.push(b));
+    }
+    return qs;
+  }
+  
 }
 
 async function sendExamData(eid,rand,email){
@@ -51,7 +63,11 @@ async function sendExamData(eid,rand,email){
   var exams = await db.collection("exams");
   try{
     var date = new Date();
-    var res = await exams.insertOne({eid:eid,rstr:rand,email:email,starttime:date.getTime(),endtime:"",answers:[]});
+    var rest = [];
+    if(eid == "CUSTOM"){
+      rest = JSON.parse(rand)
+    }
+    var res = await exams.insertOne({eid:eid,rstr:rest,email:email,starttime:date.getTime(),endtime:"",answers:[]});
     return res.insertedId.toString();
   }
   catch(err){

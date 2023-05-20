@@ -108,7 +108,7 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-          <form>
+          <form id="contactForm">
             <div class="row g-3">
               <div class="col-md-6">
                 <div class="form-floating">
@@ -136,7 +136,7 @@
                 </div>
               </div>
               <div class="col-12">
-                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                <button class="btn btn-primary w-100 py-3" type="submit" onclick = contactSubmit()>Send Message</button>
               </div>
             </div>
           </form>
@@ -200,6 +200,17 @@
     </div>
   </div>
   <!-- Footer End -->
+  <script>
+    function contactSubmit(){
+      var cdata = $('#contactForm').serializeArray();
+      var Object = {};
+      $.each(cdata,
+          function(i, v) {
+              Object[v.name] = v.value;
+          });
+      console.log(Object);
+    }
+  </script>
 </body>
 
 </html>
