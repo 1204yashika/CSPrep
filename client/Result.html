@@ -28,6 +28,29 @@
 </head>
 
 <body onload="getData()">
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="mainindex.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+      <h2 data-aos="fade-up" class="m-0 text-primary" style="font-family: 'Bruno Ace', cursive; font-weight: bold;">
+        <i class="fa-solid fa-laptop-code me-3"></i>CSPrep
+      </h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+        <a href="#" class="nav-item nav-link active" onclick="document.location.href = 'Home'">Home</a>
+        <a href="about.html" class="nav-item nav-link">About</a>
+        <a href="contact.html" class="nav-item nav-link">Contact</a>
+        <a href="faq.html" class="nav-item nav-link">FAQ</a>
+        <!-- <a href="#" class="nav-item nav-link" onclick="document.location.href = 'profile'">Profile</a> -->
+      </div>
+      <div class="button">
+        <button class="btn btn-primary" onclick="document.location.href='logout'" class="logout-button">Logout</button>
+      </div>
+    </div>
+  </nav>
     <div class="resultContainer">
         <h2 class="result">Your Result</h2>
         <div class="resultContent shadow-lg rounded">
