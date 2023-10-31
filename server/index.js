@@ -27,7 +27,7 @@ app.get('/', (req, res)=>{
     else {
         // req.session.username = "programmerscommunityofficial@gmail.com";
         // req.session.examid = "64327de7489e7a5e888bb5ce";
-        res.sendFile("/client/mainindex.html", {'root': './'});
+        res.sendFile("/client/index.html", {'root': './'});
     }
     
 });
@@ -38,7 +38,7 @@ app.get('/faq', (req, res)=>{
     else {
         // req.session.username = "1204yashikaagrawal@gmail.com";
         // req.session.examid = "64327de7489e7a5e888bb5ce";
-        res.sendFile("/client/mainindex.html", {'root': './'});
+        res.sendFile("/client/index.html", {'root': './'});
         res.status(400);
     }
     
@@ -51,7 +51,7 @@ app.get('/profile', (req, res)=>{
     else {
         // req.session.username = "1204yashikaagrawal@gmail.com";
         // req.session.examid = "64327de7489e7a5e888bb5ce";
-        res.sendFile("/client/mainindex.html", {'root': './'});
+        res.sendFile("/client/index.html", {'root': './'});
         res.status(400);
     }
     
